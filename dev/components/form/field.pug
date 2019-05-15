@@ -5,7 +5,7 @@ mixin field(data)
   +b.LABEL.field(class=data.style class=data.required ? '_required' : '')
     +e.SPAN.caption= data.name
     +e.DIV.input
-      +e.INPUT(type=data.type value=data.value placeholder=data.placeholder disabled=data.disabled)
+      +e.INPUT(type=data.type value=data.value placeholder=data.placeholder disabled=data.disabled data-mask=data.mask)
 
 mixin textarea(data)
   +b.LABEL.field(class=data.style class=data.required ? '_required' : '')

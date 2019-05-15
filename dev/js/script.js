@@ -3,6 +3,18 @@
   // svg for all
   svg4everybody();
 
+  function phoneMask() {
+    document.querySelectorAll('input[type="tel"]').forEach((input, k) => {
+      input.addEventListener('input', (e) => {
+        let v = input.value.replace('+7', '').trim()
+        input.value = VMasker.toPattern(v, {pattern: "+7 (999) 999-99-99"})
+      })
+    })
+  }
+
+  phoneMask()
+
+  // slider options
   const sliderOptions = {
     'banner': {
       freeScroll: false,
@@ -549,6 +561,8 @@
         })
       })
 
+      phoneMask()
+
       try {
         document.querySelector('.modal__close').addEventListener('click', (e) => {
           e.preventDefault()
@@ -581,6 +595,29 @@
 
     tripProgress.style.width = `${tripValue}%`
   }
+
+  document.querySelectorAll('[data-image]').forEach((image, i) => {
+    image.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const src = image.dataset.image,
+            img = document.createElement('img')
+
+      img.src = src
+
+      let modal = new tingle.modal({
+        closeMethods: ['overlay', 'escape'],
+        onClose: function() {
+          this.remove()
+        },
+        cssClass: ['modal', 'modal_gallery'],
+      });
+
+      modal.setContent(img);
+      modal.open()
+
+    })
+  })
 
   //Имитация загрузки
   const loading = document.querySelector('.loading');

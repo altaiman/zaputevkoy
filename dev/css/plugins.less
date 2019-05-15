@@ -11,6 +11,7 @@
   height: 50px;
   width: 320px;
   max-width: 100%;
+  font-family: @fontText;
   font-size: @fontSizeDefaultM;
   border-radius: 5px;
 
@@ -20,7 +21,7 @@
     top: 50%;
     transform: translateY(-50%);
     margin: 0;
-    width: 8px;
+    width: 12px;
     height: 8px;
     content: '';
     border: none;
@@ -99,7 +100,8 @@
   }
 
   &__dropdown_fix {
-    width: 940px;
+    margin-left: 66px;
+    width: 981px;
   }
 
   &__line {
@@ -340,6 +342,7 @@
     text-overflow: ellipsis;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     background: @colorBgMain;
+    border: none;
     cursor: pointer;
 
     &::after {

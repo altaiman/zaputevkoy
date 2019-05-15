@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 9;
   background: @colorBgLight;
 
   &__top {
@@ -89,25 +91,25 @@
       color: currentColor;
       text-decoration: none;
 
-      &:hover {
-        &::before {
-          opacity: 1;
-          bottom: -2px;
-        }
-      }
+      // &:hover {
+      //   &::before {
+      //     opacity: 1;
+      //     bottom: -2px;
+      //   }
+      // }
 
-      &::before {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        content: '';
-        opacity: 0;
-        background: currentColor;
-        pointer-events: none;
-        transition: all @transitionSpeedDefault;
-      }
+      // &::before {
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: 0;
+      //   width: 100%;
+      //   height: 1px;
+      //   content: '';
+      //   opacity: 0;
+      //   background: currentColor;
+      //   pointer-events: none;
+      //   transition: all @transitionSpeedDefault;
+      // }
     }
   }
 }
