@@ -1,0 +1,65 @@
+include ../global.pug
+include data.pug
+
+mixin pages(data)
+  +b.pages
+    +e.title 25 результатов:
+    +e.UL.list
+      +e.LI.item._previous._disabled
+        a(href="#previous")
+          +svg({
+            name: 'ico-arrow-small'
+          })
+      +e.LI.item._current
+        a(href="#page-1") 1
+      +e.LI.item
+        a(href="#page-2") 2
+      +e.LI.item
+        a(href="#page-3") 3
+      +e.LI.item
+        span ...
+      +e.LI.item
+        a(href="#page-20") 20
+      +e.LI.item._next
+        a(href="#next")
+          +svg({
+            name: 'ico-arrow-small'
+          })
+          
+    - if (data.link)  
+      +e.A.link(href="#next") Следующая страница
+        
+  
+mixin pagesReviews
+  +b.pages._reviews
+    +e.UL.list
+      +e.LI.item._previous._disabled
+        a(href="#previous")
+          +svg({
+            name: 'ico-arrow-small'
+          })
+      +e.LI.item._current
+        a(href="#page-1") 1
+      +e.LI.item
+        a(href="#page-2") 2
+      +e.LI.item
+        a(href="#page-3") 3
+      +e.LI.item
+        a(href="#page-4") 4
+      +e.LI.item
+        a(href="#page-5") 5
+      +e.LI.item
+        a(href="#page-6") 6
+      +e.LI.item
+        a(href="#page-7") 7
+      +e.LI.item
+        a(href="#page-8") 8
+      +e.LI.item
+        a(href="#page-9") 9
+      +e.LI.item._text
+        a(href="#page-next") Следующая
+      +e.LI.item._next
+        a(href="#next")
+          +svg({
+            name: 'ico-arrow-small'
+          })

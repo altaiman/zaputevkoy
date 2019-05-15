@@ -1,0 +1,60 @@
+include ../global.pug
+include data.pug
+
+mixin details(data)
+  +b.LI.details
+    +e.info
+      +b.UL.info._details
+        +e.LI.cell
+          +e.SPAN.label Даты:
+          +e.SPAN.value 3 авг (сб) - 14 авг
+          +e.SPAN.value 11 ночей
+        +e.LI.cell
+          +e.SPAN.label Размещение:
+          +e.SPAN.value UAI
+          +e.SPAN.value DBL + 1CHL (2-14)
+        +e.LI.cell
+          +e.SPAN.label Авиакомпания:
+          +e.SPAN.value._image 
+            img(src=global.paths.pictures+'avia/aviaflot.png')
+          +e.SPAN.value Топливный сбор включен
+        +e.LI.cell
+          +e.SPAN.label Туроператор:
+          +e.SPAN.value._image
+            img(src=global.paths.pictures+'operators/biblio.png')
+    +e.price
+      +b.price._details
+        +e.value._old
+          span= toPrice(15635) + 'р'
+        +e.value
+          span= toPrice(12000) + 'р'
+  
+
+mixin detailsHotel
+  +b.LI.details._offer
+    +e.info
+      +b.UL.info._details
+        +e.LI.cell
+          +e.SPAN.label Даты:
+          +e.SPAN.value 3 авг (сб) - 14 авг
+          +e.SPAN.value 11 ночей
+        +e.LI.cell
+          +e.SPAN.label Размещение:
+          +e.SPAN.value UAI
+          +e.SPAN.value DBL + 1CHL (2-14)
+        +e.LI.cell
+          +e.SPAN.label Авиакомпания:
+          +e.SPAN.value._image 
+            img(src=global.paths.pictures+'avia/aviaflot.png')
+          +e.SPAN.value Топливный сбор включен
+        +e.LI.cell
+          +e.SPAN.label Туроператор:
+          +e.SPAN.value._image
+            img(src=global.paths.pictures+'operators/biblio.png')
+    +e.price
+      +b.price._details
+        +e.value
+          span= toPrice(12000) + 'р'
+        
+      +b.A.button._full(href="#")
+        span Подробнее

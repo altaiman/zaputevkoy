@@ -1,0 +1,48 @@
+include ../global.pug
+include data.pug
+
+mixin gallery
+  +b.gallery(data-slider="gallery")
+    +e.controls(data-slider-controls)
+      +b.BUTTON.arrow._prev(data-slider-controls-prev)
+        +svg({
+          name: 'ico-arrow'
+        })
+      +b.BUTTON.arrow._next(data-slider-controls-next)
+        +svg({
+          name: 'ico-arrow'
+        })
+    +e.view(data-modal-open="gallery")
+      img(src="#")
+    +e.UL.list(data-slider-slides)
+      +e.LI.item(data-image=global.paths.pictures+'card.jpg')
+        img(src=global.paths.pictures+'card.jpg')
+      +e.LI.item(data-image=global.paths.pictures+'card2.jpg')
+        img(src=global.paths.pictures+'card2.jpg')
+      +e.LI.item(data-image=global.paths.pictures+'card.jpg')
+        img(src=global.paths.pictures+'card.jpg')
+      +e.LI.item(data-image=global.paths.pictures+'card2.jpg')
+        img(src=global.paths.pictures+'card2.jpg')
+  
+
+mixin galleryOffice
+  +b.gallery._office
+    +e.count(data-gallery-count-current="1" data-gallery-count-all="0")
+    +e.controls(data-gallery-controls)
+      +b.BUTTON.arrow._prev(data-gallery-controls="0")
+        +svg({
+          name: 'ico-arrow'
+        })
+      +b.BUTTON.arrow._next(data-gallery-controls="1")
+        +svg({
+          name: 'ico-arrow'
+        })
+    +e.view
+      img(src="#")
+    +e.UL.list
+      +e.LI.item(data-image=global.paths.pictures+'card.jpg' data-index="0")
+        img(src=global.paths.pictures+'card.jpg')
+      +e.LI.item(data-image=global.paths.pictures+'card2.jpg' data-index="1")
+        img(src=global.paths.pictures+'card2.jpg')
+      +e.LI.item(data-image=global.paths.pictures+'card.jpg' data-index="2")
+        img(src=global.paths.pictures+'card.jpg')

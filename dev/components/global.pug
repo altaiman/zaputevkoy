@@ -1,0 +1,28 @@
+include !bemto/index.pug
+
+-
+  var global = {
+    title: 'ЗаПутёвкой',
+    separator: '|',
+    description: '',
+    lang: 'ru',
+    paths: {
+      images: 'img/',
+      pictures: 'pictures/',
+      icons() { return this.images+'symbols.svg' }
+    },
+    template: {
+      adaptive: false,
+      width: 1240
+    },
+    
+    production: false
+  }
+  
+  function randomInt(min,max) {
+      return Math.floor(Math.random()*(max-min+1)+min);
+  }
+  
+  function toPrice(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }

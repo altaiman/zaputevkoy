@@ -1,0 +1,137 @@
+include ../global.pug
+include data.pug
+
+include ../form/checkbox.pug
+
+mixin search
+  +b.search
+    +e.header
+      +e.block
+        +e.SPAN.location Откуда: <a href="#city" class="link">Санкт-Петербург</a>
+      +e.block
+        +b.A.link(href="#") 
+          span Расширенный поиск
+          +b.I.ico
+            +svg({
+              name: 'ico-filter'
+            })
+    +e.FORM.form
+      +e.options
+        +e.select.select__
+          select
+            optgroup(label="Популярные")
+              option(value="1") Турция
+              option(value="2") Греция
+              option(value="3") Кипр
+              option(value="4") Россия
+              option(value="5" selected) Тайланд
+              
+        +e.select.select__._size-s(data-drop)
+          +b.BUTTON.js-Dropdown-title 10.02 - 25.02
+          +e.dropdown._fix
+            +b.calendar
+              +e.header
+                +e.months
+                  +e.progress
+                  +e.UL.months-list
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                    +e.LI.months-item
+                        
+              +e.content
+                +e.controls
+                  +e.BUTTON.arrow._prev(data-calendar-controls="0")
+                    +svg({
+                      name: 'ico-arrow-small'
+                    })
+                  +e.BUTTON.arrow._next(data-calendar-controls="2")
+                    +svg({
+                      name: 'ico-arrow-small'
+                    })
+                +e.UL.list
+                  +e.LI.item
+                    +b.month
+                  +e.LI.item
+                    +b.month
+                  +e.LI.item
+                    +b.month
+              +e.footer
+                +b.BUTTON.link(data-calendar-clear)
+                  span Сбросить
+                +b.BUTTON.button(data-calendar-save)
+                  span Сохранить
+                
+              
+        +e.select.select__(data-drop id="search-people")
+          +b.BUTTON.js-Dropdown-title 2 взрослых 1 ребенок
+          +e.dropdown
+            +b.counter
+              +e.BUTTON.btn._minus(data-counter-control="0")
+              +e.value(data-counter-value="2")
+                span взрослых
+              +e.BUTTON.btn._plus(data-counter-control="1")
+            
+            +b.selector(data-selector)
+              +e.INPUT.input(type="text")
+              +e.UL.list
+                +e.LI.item
+                  span Ребенок 8 лет
+                  +e.BUTTON.remove
+              +b.toggle
+                +e.BUTTON.header
+                  span Добавить ребенка
+                +e.content
+                  +e.block
+                    +e.UL.list
+                      +e.LI.list-item(data-value="Ребенок 0 лет")
+                        span 0 лет
+                      +e.LI.list-item(data-value="Ребенок 1 год")
+                        span 1 год
+                      +e.LI.list-item(data-value="Ребенок 2 года")
+                        span 2 года
+                      +e.LI.list-item(data-value="Ребенок 3 года")
+                        span 3 года
+                      +e.LI.list-item(data-value="Ребенок 4 года")
+                        span 4 года
+                      +e.LI.list-item(data-value="Ребенок 5 лет")
+                        span 5 лет
+                  +e.block
+                    +e.UL.list
+                      +e.LI.list-item(data-value="Ребенок 6 лет")
+                        span 6 лет
+                      +e.LI.list-item(data-value="Ребенок 8 лет")
+                        span 8 лет
+                      +e.LI.list-item(data-value="Ребенок 9 лет")
+                        span 9 лет
+                      +e.LI.list-item(data-value="Ребенок 10 лет")
+                        span 10 лет
+                      +e.LI.list-item(data-value="Ребенок 11 лет")
+                        span 11 лет
+                      +e.LI.list-item(data-value="Ребенок 12 лет")
+                        span 12 лет
+                        
+        +e.select.select__._size-s(data-drop)
+          +b.BUTTON.js-Dropdown-title 10 - 12 ночей
+          +e.dropdown
+            +b.counter._btns
+              +e.BUTTON.btn._minus(data-counter-control="0")
+              +e.value._hidden(data-counter-value="2")
+              +e.BUTTON.btn._plus(data-counter-control="1")
+            +e.line
+              +checkboxDropdown({
+                name: '±2',
+                state: false
+              })
+              
+      +e.submit
+        +b.BUTTON.button._highlight._size-l._full(type="submit")
+          span Поиск

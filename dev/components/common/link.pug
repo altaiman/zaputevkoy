@@ -1,0 +1,27 @@
+include ../global.pug
+include data.pug
+
+mixin link(data)
+  +b.A.link(href=data.href class=data.style)
+    +e.SPAN.name !{data.name}
+  
+mixin link_ico(data)
+  - if (data.href)
+    +b.A.link._ico(href=data.href class=data.style)
+      +e.ico
+        +svg({
+          name: data.ico.name,
+          size: data.ico.size
+        })
+      +e.SPAN.name !{data.name}
+      - if (data.name2)
+        +e.SPAN.name !{data.name2}
+      
+  - else
+    +b.SPAN.link._ico(class=data.style)
+      +e.ico
+        +svg({
+          name: data.ico.name,
+          size: data.ico.size
+        })
+      +e.SPAN.name !{data.name}

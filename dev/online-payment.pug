@@ -1,0 +1,82 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/search/index.pug
+include components/sidebar/index.pug
+include components/form/index.pug
+include components/contacts/index.pug
+include components/online/index.pug
+include components/modal/index.pug
+include components/tabs/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Оплата онлайн'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+					+e.header._online
+						+breadcrumbs(['Оплата онлайн'])
+						+b.SPAN.caption Оплата онлайн
+						
+				+e.container.container._flex
+					+e.block._main-online
+						+b.block._ticket._online
+							+b.SPAN.caption._strong Внимание: тур не выбран!
+							p Для он-лайн оплаты Вам необходимо подобрать тур на нашем сайте.
+							+b.A.button._highlight(href="#") Подобрать тур
+							
+						+path
+						
+						+b.block._online._tabs
+							+e.tabs
+								+tabs
+							+e.tabs-content(data-tabs-content="online")
+								div(data-tab="0")
+									+b.step
+										+e.state
+											strong 1
+											span шаг
+										+e.title
+											+b.SPAN.caption Введите данные гражданского паспорта
+											p все данные вводятся так, как указано в паспорте
+											
+									+formOnline
+									
+								div(data-tab="1")
+									+b.SPAN.caption Инструкция он-лайн оплаты тура
+								div(data-tab="2")
+									+b.SPAN.caption Образцы документов
+							
+						+path
+						
+					+e.block._sidebar
+						+sidebarOnline
+					
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

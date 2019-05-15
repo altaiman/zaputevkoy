@@ -1,0 +1,161 @@
+include ../global.pug
+include data.pug
+
+include rating.pug
+include ticket.pug
+include details.pug
+include ../gallery/index.pug
+
+mixin cardSmall(data)
+  +b.card(class=data.hot ? '_hot' : '')
+    +e.image
+      img(src=global.paths.pictures+data.image)
+    +e.info
+      +b.SPAN.caption._size-s= data.title
+      +e.text!= data.text
+        
+      +e.footer
+        +b.price
+          +e.value._old
+            span= toPrice(data.price) + 'р'
+          +e.value
+            span= toPrice(data.price) + 'р'
+        +b.A.button(href="#card")
+          span Подробнее
+
+
+
+mixin cardSearch(data)
+  +b.card._search(data-more-action class=data.showing ? 'show-more' : '')
+    +e.main
+      +e.image
+        img(src=global.paths.pictures+data.image)
+      +e.info
+        +e.info-block._info
+          +e.header
+            +rating(3)
+            +e.SPAN.location Турция, Стамбул
+            +b.SPAN.caption._size-s Grand Liza 3*
+            
+          +b.UL.info
+            +e.LI.cell
+              +e.SPAN.label Вылет из:
+              +e.SPAN.value Санкт-Петербург
+            +e.LI.cell
+              +e.SPAN.label Гости:
+              +e.SPAN.value 2 (взрослых)
+              
+          +e.text._size-s
+            p Купите <a href="#">Online</a> или в <a href="#">офисе</a>
+            p Купить тур в <a href="#"><strong>рассрочку</strong></a>
+            
+        +e.info-block._price
+          +b.price._size-l
+            +e.value
+              span= toPrice(12000) + 'р'
+            +e.value._old
+              span= toPrice(15635) + 'р'
+          
+          - if (data.showing)
+            +b.BUTTON.button._highlight(data-more data-toggle="Подробнее")
+              span Свернуть
+              
+          - else
+            +b.BUTTON.button._highlight(data-more data-toggle="Свернуть")
+              span Подробнее
+              
+    +e.UL.details(data-more)
+      +details
+      +details
+      +details
+      +e.A.all.button(href="#all-tours") Все туры в этот отель
+      
+mixin cardHotel
+  +b.card._hotel
+    +e.header
+      +b.SPAN.caption Galaxy 3 Hotel 3 ***
+      +ratingHotel
+    +e.content
+      +e.block._gallery
+        +gallery
+        
+      +e.block
+        +e.block._info
+          +b.UL.info._horizontal
+            +e.LI.cell
+              +e.SPAN.label Даты:
+              +e.SPAN.value 3 авг (сб) - 14 авг (11 ночей)
+            +e.LI.cell
+              +e.SPAN.label Вылет из:
+              +e.SPAN.value Санкт-Петербург
+            +e.LI.cell
+              +e.SPAN.label Гости:
+              +e.SPAN.value 2 (взрослых)
+            +e.LI.cell
+              +e.SPAN.label Питание:
+              +e.SPAN.value AI
+            +e.LI.cell
+              +e.SPAN.label Тип номера:
+              +e.SPAN.value DBL
+            +e.LI.cell
+              +e.SPAN.label Туроператор:
+              +e.DIV.value._image
+                img(src=global.paths.pictures+'operators/vit-tour.png')
+                
+          +b.UL.info_horizontal
+            +e.LI.cell
+              +e.SPAN.label Авиакомпания:
+              +e.DIV.value._image
+                img(src=global.paths.pictures+'avia/wizz.png')
+            +e.LI.cell
+              +e.SPAN.label Топливный сбор:
+              +e.SPAN.value Не включен
+            +e.LI.cell
+              +e.SPAN.label Перелет:
+              +e.SPAN.value._event(data-droping="info") Информация о рейсе
+              
+                +b.DIV.drop._info(data-dropped="info")
+                  +b.flight
+                    +e.UL.list
+                      +e.LI.item
+                        +e.date
+                          +e.SPAN.time 22:00
+                          p <strong>Москва</strong> 9 Марта, сб
+                        +e.info
+                          +e.path
+                            +e.SPAN.path-name Прямой перелет
+                            +e.path-line
+                              +e.path-plain
+                                +svg({
+                                  name: 'ico-plain'
+                                })  
+                              +e.path-point(data-code="SVO")
+                              +e.path-point(data-code="HKT")
+                        +e.date
+                          +e.SPAN.time 11:00
+                          p <strong>Вьетнам</strong> 9 Марта, сб
+                          
+                      +e.LI.item
+                        +e.date
+                          +e.SPAN.time 12:00
+                          p <strong>Москва</strong> 9 Марта, сб
+                        +e.info
+                          +e.path._back
+                            +e.SPAN.path-name Прямой перелет
+                            +e.path-line
+                              +e.path-plain
+                                +svg({
+                                  name: 'ico-plain'
+                                })  
+                              +e.path-point(data-code="HKT")
+                              +e.path-point(data-code="SVO")
+                        +e.date
+                          +e.SPAN.time 11:00
+                          p <strong>Вьетнам</strong> 9 Марта, сб
+                      
+              
+        +e.block
+          +ticket
+        
+        +b.A.button._highlight._full._size-l(href="#") Еще 18 вариантов
+  

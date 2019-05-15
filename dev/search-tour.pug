@@ -1,0 +1,174 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/card/index.pug
+include components/sidebar/index.pug
+include components/modal/index.pug
+//- include components/tabs/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+					+e.header
+						+breadcrumbs(['Турция'])
+						+b.SPAN.caption._size-l Туры в Турцию
+					
+				+e.container.container._flex
+					+e.block._main
+						+e.line._top
+							+e.block
+								+pages({ link: true })
+							
+							+e.block._sort
+								+e.SPAN.caption Сортировать:
+								+b.select._field._inline._fsize-s
+									select
+										option(value="0") От дешевых к дорогим
+										option(value="1") От дорогих к дешевым
+										option(value="2") По популярности
+							
+						+cardSearch({
+							image: 'card.jpg',
+							showing: true
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						+cardSearch({
+							image: 'card.jpg'
+						})
+						
+						+e.line._top
+							+e.block
+								+pages({})
+							
+							+e.block._sort
+								+e.SPAN.caption Сортировать:
+								+b.select._field._inline._fsize-s
+									select
+										option(value="0") От дешевых к дорогим
+										option(value="1") От дорогих к дешевым
+										option(value="2") По популярности
+						
+					+e.block._sidebar
+						+sidebarFilter
+						+sidebarForm
+						+sidebarSubscribe
+						
+			+b.SECTION.section._light._information
+				+e.container.container._flex
+					+e.block._sidebar
+						+b.UL.sidebar-links
+							+e.LI.item
+								a(href="#") О Турции
+								+b.I.ico
+									+svg({
+										name: 'ico-arrow-small'
+									})
+							+e.LI.item
+								a(href="#") Курорты Турции
+								+b.I.ico
+									+svg({
+										name: 'ico-arrow-small'
+									})
+							+e.LI.item
+								a(href="#") Погода в Турции
+								+b.I.ico
+									+svg({
+										name: 'ico-arrow-small'
+									})
+					
+					+e.block._main
+						+b.SPAN.caption Туры в Турцию
+						+b.content._gray
+							p. 
+								Необычайную популярность путевок в Турцию у туристов объяснить довольно легко. 
+								Туры в Турцию — это удобно, всего лишь несколько часов перелёта отделяет уставших 
+								путешественников от сотен километров пляжей и самых разных отелей. Благодаря тому, 
+								что для посещения Турции из Спб не нужно открывать заранее виз, то между моментом 
+								оформления горящего тура в Турцию в турагентстве и началом отдыха может иногда 
+								пройти меньше суток. Часто радует туристов и возможность купить в Турцию горящие 
+								путевки — периодические колебания спроса на туры в турцию из Петербурга и большой 
+								выбор гостиниц обеспечивают здоровую конкуренцию на ниве ценообразования. 
+							
+							p.
+								Привлекает туристов и возможность выбрать из широкого ассортимента туров в Турцию 
+								из Санкт-Петербурга наиболее оптимальный для себя турпакет по самым разным параметрам. 
+								Для бюджетного отдыха подойдет небольшой отель в одном из курортных посёлков Алании, 
+								обеспеченная семья с детьми выберет большой гостиничный комплекс в Белеке или Ларе, 
+								курортах расположенных всего в получасе езды от анатолийского аэропорта. А молодежь 
+								с большим удовольствием предпочтёт остановиться в одном из городских отелей Кемера, 
+								Бодрума или Мармариса, известных своими дискоклубами и бурной ночной жизнью в летний 
+								сезон, благо число и звёздность здешних гостиниц порадует обладателя самого разного 
+								бюджета на поездку.
+						
+						+b.SPAN.caption._size-s Турция все включено
+						+b.content._gray
+							p. 
+								Нельзя не упомянуть о самом излюбленном туристами изобретении туристического бизнеса, 
+								широко взятом на вооружение в отелях Турции. Конечно, это та самая система отдыха в 
+								Турции «всё включено», действительно позволяющая на отдыхе расслабиться, получая на 
+								территории отеля все необходимые для качественного отдыха услуги, заранее оплатив их 
+								еще при оформлении тура. Это невероятно удобно и нравится отдыхающим, как матронам, 
+								приехавшим на отдых со своим многочисленным семейством и в кои-то веки избавившимся 
+								от пресловутого кухонного рабства. Так и туристам, расслабляющимся от отсутствия 
+								необходимости подсчитывать стоимость съеденного и выпитого в барах и ресторанах. 
+								О разнообразии блюд и вовсе не приходится говорить, десятки вариантов завтраков, 
+								обедов и тем более — ужинов, на самый привередливый вкус и здоровый аппетит. 
+								Нет ограничения и в количестве напитков, в ряде отелей — не только турецкого, 
+								но и зарубежного производства. Добавьте активную развлекательную программу, 
+								часто с профессионально поставленными шоу и выступлениями именитых артистов, 
+								на высочайшем уровне развитую инфраструктуру для детского отдыха, активного 
+								спорта — и вы поймёте, насколько приятным и вожделенным может быть отдых в горящей 
+								Турции по системе «all inclusive». Бронируйте туры в Турции <a href="#">в нашей сети турагентств</a> 
+								в Петербурге по выгодным условиям.
+								
+						+b.UL.content-links
+							+e.LI.item
+								a(href="#") О Турции
+							+e.LI.item
+								a(href="#") Курорты Турции
+							+e.LI.item
+								a(href="#") Погода в Турции
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

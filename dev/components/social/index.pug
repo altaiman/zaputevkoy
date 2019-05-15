@@ -1,0 +1,39 @@
+include ../global.pug
+include data.pug
+
+mixin social
+  +b.social
+    +e.A.link(href="#fb")
+      +b.I.ico
+        +svg({
+          name: 'social-fb'
+        })
+    +e.A.link(href="#inst")
+      +b.I.ico
+        +svg({
+          name: 'social-inst'
+        })
+    +e.A.link(href="#vk")
+      +b.I.ico
+        +svg({
+          name: 'social-vk'
+        })
+    +e.A.link(href="#ok")
+      +b.I.ico
+        +svg({
+          name: 'social-ok'
+        })
+  
+mixin social-footer
+  +b.social
+    +e.A.link(href="#inst")
+      +b.I.ico
+        +svg({
+          name: 'social-inst'
+        })
+    +e.A.link(href="#vk")
+      +b.I.ico
+        +svg({
+          name: 'social-vk'
+        })
+  

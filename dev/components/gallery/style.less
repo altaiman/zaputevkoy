@@ -1,0 +1,113 @@
+.gallery {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &__controls {
+    position: absolute;
+    left: 50%;
+    bottom: 55px;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 100%;
+    padding: 0 10px;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .arrow {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+
+      svg {
+        margin-left: 1px;
+        width: 8px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 13px 0 0;
+    width: calc(~'25% - 10px');
+    height: 74px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all @transitionSpeedDefault;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    img {
+      max-height: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__view {
+    position: relative;
+    height: 310px;
+    width: 100%;
+    margin: 0 0 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+
+    img {
+      .positionCenter();
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    z-index: 3;
+
+    &::before {
+      display: block;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 600;
+      content: attr(data-gallery-count-current) '/' attr(data-gallery-count-all);
+    }
+  }
+}
+
+.gallery_office {
+  .gallery {
+    &__view {
+      height: 230px;
+      border-radius: 0;
+    }
+
+    &__list {
+      margin: 0;
+    }
+
+    &__item {
+      width: calc(~'33.333% - 9px');
+      border-radius: 0;
+    }
+
+    &__controls {
+      bottom: auto;
+      top: 102px;
+    }
+  }
+}

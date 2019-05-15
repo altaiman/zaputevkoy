@@ -1,0 +1,12 @@
+include ../global.pug
+include data.pug
+
+mixin tabs
+  +b.tabs(data-tabs="online")
+    +e.UL.list
+      +e.LI.item(data-tab="0")
+        span Данные плательщика
+      +e.LI.item(data-tab="1")
+        span Инструкция он-лайн оплаты тура
+      +e.LI.item(data-tab="2")
+        span Образцы документов

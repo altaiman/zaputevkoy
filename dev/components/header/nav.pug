@@ -1,0 +1,36 @@
+include ../global.pug
+
+mixin nav(data)
+  +b.NAV.nav
+    +e.UL.list
+      +e.LI.item
+        a(href="#tours") Поиск туров
+      +e.LI.item
+        a(href="#hot-tours") Горящие туры
+      +e.LI.item
+        a(href="#paroms") Паромы и круизы
+      +e.LI.item
+        a(href="#russia-tours") Туры по России
+      +e.LI.item
+        a(href="#online-payment") Оплата онлайн
+      +e.LI.item
+        a(href="#achivments") Достижения
+      +e.LI.item
+        a(href="#contacts") Контакты
+          
+        
+mixin nav-footer(data)
+  +b.NAV.nav._footer
+    +e.UL.list
+      +e.LI.item
+        a(href="index.html") Главная
+      +e.LI.item
+        a(href="#reviews") Отзывы
+      +e.LI.item
+        a(href="#vacancies") Вакансии
+      +e.LI.item
+        a(href="#requsites") Реквизиты и способы оплаты
+      +e.LI.item
+        a(href="#contacts") Контакты
+          
+        

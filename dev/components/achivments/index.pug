@@ -1,0 +1,277 @@
+include ../global.pug
+include data.pug
+
+mixin achivments
+  +b.achivments
+    +e.UL.list
+      +e.LI.item
+        +b.SPAN.caption._size-l 6000 туристов
+        +e.text
+          p Мы ежемесячно отправляем отдыхать
+      +e.LI.item
+        +b.SPAN.caption._size-l 38 стран
+        +e.text
+          p Наши менеджеры знают о них все
+      +e.LI.item
+        +b.SPAN.caption._size-l 20 туроператоров
+        +e.text
+          p С которыми мы постоянно сотрудничаем
+
+mixin profit
+  +b.profit
+    +e.UL.list
+      +e.LI.item
+        +e.A.block._type-1(href="#profit")
+          +e.SPAN.block-title.caption._size-l Оплата в рассрочку
+          img(src=global.paths.images+'profit/block-1.jpg')
+            
+      +e.LI.item
+        +e.A.block._type-2(href="#profit")
+          +e.SPAN.block-title.caption._size-l Больше за меньшие деньги
+          img(src=global.paths.images+'profit/block-2.jpg')
+            
+      +e.LI.item
+        +e.A.block._type-1(href="#profit")
+          +e.SPAN.block-title.caption._size-l Оплата в рассрочку
+          img(src=global.paths.images+'profit/block-1.jpg')
+            
+      +e.LI.item
+        +e.A.block._type-2(href="#profit")
+          +e.SPAN.block-title.caption._size-l Больше за меньшие деньги
+          img(src=global.paths.images+'profit/block-2.jpg')
+
+
+mixin feautures
+  +b.feautures
+    +e.UL.list
+      each item in feauturesData
+        +e.LI.item
+          +feauture({
+            title: item.title,
+            ico: item.ico,
+            text: item.text
+          })
+        
+            
+            
+mixin feauture(data)
+  +b.feauture
+    +e.header
+      +e.ico
+        +svg({
+          name: data.ico
+        })
+      +b.SPAN.caption= data.title
+      
+    +e.content
+      p= data.text
+      
+mixin feauturesHotel
+  +b.feautures._quadruple(data-limit="4")
+    +e.UL.list(data-limit-list)
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svgSize({
+                name: 'ico-feauture-wifi',
+                size: [30,30]
+              })
+            +e.SPAN.caption Интернет
+            
+          +e.content
+            p -Wi-Fi
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-service'
+              })
+            +e.SPAN.caption Общие услуги
+            
+          +e.content
+            p. 
+              - Банкомат<br>
+              - Круглосуточная стойка регистрации<br>
+              - Лифт<br>
+              - Экспресс-регистрация<br>
+              - Камера хранения багажа
+              
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-parking'
+              })
+            +e.SPAN.caption Парковка
+            
+          +e.content
+            p - Общественная
+            
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-sport'
+              })
+            +e.SPAN.caption Спорт
+            
+          +e.content
+            p. 
+              - Виндсерфинг<br>
+              - Пешие прогулки<br>
+              - Водные виды
+              
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-map'
+              })
+            +e.SPAN.caption Пляжная линия
+            
+          +e.content
+            p - 3-я пляжная линия
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-comfort'
+              })
+            +e.SPAN.caption Удобство в номерах
+            
+          +e.content
+            p. 
+              - Кондиционер<br>
+              - Обслуживание в номерах<br>
+              - Терраса<br>
+              - Фен<br>
+              - Телевизор<br>
+              - Телефон<br>
+              - Душ
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-key'
+              })
+            +e.SPAN.caption Специальные номера
+            
+          +e.content
+            p. 
+              - Для некурящих<br>
+              - Допускается размещение<br>
+              с животными
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-kitchen'
+              })
+            +e.SPAN.caption Питание
+            
+          +e.content
+            p. 
+              - Ресторан<br>
+              - Бар<br>
+              - Лобби бар
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-transport'
+              })
+            +e.SPAN.caption Транспорт
+            
+          +e.content
+            p - Трансфер
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-cloth'
+              })
+            +e.SPAN.caption Услуги по чистке одежды
+            
+          +e.content
+            p - Чистка обуви
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-bar'
+              })
+            +e.SPAN.caption Развлечения
+            
+          +e.content
+            p. 
+              - Экскурсии<br>
+              - Ночной клуб
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-relax'
+              })
+            +e.SPAN.caption Отдых на воде
+            
+          +e.content
+            p. 
+              - Открытый бассейн<br>
+              - Ныряние с маской и трубкой<br>
+              - Водные лыжи
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-health'
+              })
+            +e.SPAN.caption Здоровье и красота
+            
+          +e.content
+            p - Кабинет врача
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.ico
+              +svg({
+                name: 'ico-feauture-beach'
+              })
+            +e.SPAN.caption Пляж
+            
+          +e.content
+            p - Муниципальный пляж
+          
+      +e.LI.item
+        +b.feauture._hotel
+          +e.header
+            +e.SPAN.caption Тип пляжа
+            
+          +e.content
+            p - Песок жёлтый
+            
+    +e.more(data-limit-disable)
+      +b.BUTTON.button._transparent-dark._size-wide
+        span Подробнее
+          

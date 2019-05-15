@@ -1,0 +1,48 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/achivments/index.pug
+include components/card/index.pug
+include components/sidebar/index.pug
+include components/tabs/index.pug
+include components/search/index.pug
+include components/reviews/index.pug
+include components/map/index.pug
+include components/404/index.pug
+include components/modal/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+							
+					+notFound404-1
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

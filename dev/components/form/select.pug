@@ -1,0 +1,11 @@
+include ../global.pug
+include data.pug
+
+- var i = 1;
+
+mixin select(data)
+  +b.SELECT.select
+    +e.OPTION(value="0" disabled selected data-select)= data.select
+    each item in data.items
+      +e.OPTION(value=i)= item
+      - i++

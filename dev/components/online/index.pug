@@ -1,0 +1,19 @@
+include ../global.pug
+include data.pug
+
+mixin path
+  +b.UL.path(data-step="1")
+    +e.LI.step
+      +e.text
+        span Данные плательщика
+    +e.LI.step
+      +e.text
+        span Сведения о туристах
+    +e.LI.step
+      +e.text
+        span Условия оферты
+    +e.LI.step
+      +e.text
+        span Оплата
+    
+  

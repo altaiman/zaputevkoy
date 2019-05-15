@@ -1,0 +1,27 @@
+include ../global.pug
+include data.pug
+
+mixin countries
+  +b.countries(data-more-action)
+    +e.UL.list
+      each item in countriesData
+        +e.LI.item
+          +country({
+            title: item.country.title,
+            flag: item.country.flag,
+            price: item.price
+          })
+        
+    +e.BUTTON.more.button._size-s(data-toggle="Свернуть" data-more)
+      span Еще страны
+
+mixin country(data)
+  +b.A.country(href="#")
+    +e.title
+      +e.flag
+        img(src=global.paths.images+'flags/'+data.flag alt=data.title)
+      span= data.title
+    +e.price
+      span от <strong>#{data.price}</strong> р
+        
+        

@@ -1,0 +1,61 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/search/index.pug
+include components/reviews/index.pug
+include components/form/index.pug
+include components/modal/index.pug
+include components/contacts/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+					+e.header._contacts
+						+breadcrumbs(['Контакты'])
+						+b.SPAN.caption Контакты
+					
+					+b.SPAN.caption._centered Офисы в Санкт - Петербурге
+					
+					+b.block._form._address
+						+address
+						+e.content._bg
+							p. 
+								Green Card является не единым соглашением, а совокупностью двусторонних 
+								договоров между странами-участницами, каждая из которых представлена 
+								своим Национальным Бюро. Основные положения страховых отношени
+								
+					+b.items
+						+office(false)
+						+office(true)
+						+office(true)
+					
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

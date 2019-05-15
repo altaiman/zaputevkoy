@@ -1,0 +1,40 @@
+include ../global.pug
+include data.pug
+
+include ../form/index.pug
+
+mixin modalOrder
+  +b.modal._size-s(data-modal="order")
+    +e.HEADER.head
+      +b.SPAN.caption._size-l Оставить заявку
+    +e.content
+      +b.FORM.form._modal
+        +e.line
+          +field({
+            name: 'Ваше имя',
+            placeholder: 'Иванов Иван Иванович',
+            type: 'text'
+          })
+        +e.line
+          +field({
+            name: 'Ваш e-mail',
+            placeholder: 'Иванов Иван Иванович',
+            type: 'text'
+          })
+        +e.line
+          +field({
+            name: 'Контактный телефон',
+            placeholder: '+7 ( ___ ) - ___ - __ - __',
+            type: 'text'
+          })
+        +e.text
+          p. 
+            Отправка заявки ни к чему не обязывает и не является ронированием. 
+            Получив заявку, менеджер свяжется с Вами для уточнения деталей
+        +e.submit
+          +b.BUTTON.button._highlight._full
+            span Отправить заявку
+
+mixin modalGallery
+  +b.modal._gallery(data-modal="gallery")
+    +e.content

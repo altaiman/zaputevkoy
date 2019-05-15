@@ -1,0 +1,37 @@
+.modal {
+  max-width: 100%;
+
+  &__head {
+    text-align: center;
+
+    .caption {
+      font-weight: 600;
+    }
+  }
+
+  .tingle-modal-box {
+    &__content {
+      padding: 30px;
+    }
+  }
+}
+
+.modal_size-s {
+  .tingle-modal-box {
+    width: 447px;
+  }
+}
+
+.modal_gallery {
+  .tingle-modal-box {
+    width: auto;
+    font-size: 0;
+    border-radius: 5px;
+
+    &__content {
+      padding: 0;
+      overflow: hidden;
+      border-radius: inherit;
+    }
+  }
+}

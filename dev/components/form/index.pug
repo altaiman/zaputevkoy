@@ -1,0 +1,223 @@
+include ../global.pug
+include data.pug
+
+include checkbox.pug
+include select.pug
+include field.pug
+
+  
+mixin form(data)
+  +b.FORM.form
+    +e.line
+      +field({
+        name: 'Ваше Имя',
+        type: 'text'
+      })
+      
+    +e.line._contacts
+      +field({
+        name: 'E-mail',
+        type: 'email',
+        style: '_good'
+      })
+      
+      +field({
+        name: '+7 (___) ___ __ __',
+        type: 'tel',
+        style: '_bad'
+      })
+      
+    +e.submit
+      +b.INPUT.btn(type="submit")
+        span Отправить
+
+mixin formSubscribe
+  +b.FORM.form
+    +e.line._double
+      +b.LABEL.field._btn
+        +e.DIV.input._with-button
+          +e.INPUT(type="email" placeholder="Email")
+          +e.BUTTON.btn
+            +svg({
+              name: 'ico-mail'
+            })
+      
+      +b.BUTTON.button._highlight 
+        span Подписаться на новости
+
+mixin formReview
+  +b.FORM.form._review
+    +e.line._inline
+      +field({
+        name: 'ФИО',
+        placeholder: 'Иванов Иван Иванович',
+        type: 'text',
+        required: true,
+        style: '_size-wide'
+      })
+      
+      +field({
+        name: 'Номер договора',
+        placeholder: '1234567890',
+        type: 'text',
+        required: true,
+        style: '_size-wide-s'
+      })
+      
+      +field({
+        name: 'Контактный телефон',
+        placeholder: '+7 (123) - ___ - __ - __',
+        type: 'text',
+        required: true
+      })
+      
+      +b.LABEL.field._required
+        +e.SPAN.caption Город оформления
+        +b.select._field._city
+          select
+            option(value="1") Турция
+            option(value="2") Греция
+            option(value="3") Кипр
+            option(value="4") Россия
+            option(value="5" selected) Тайланд
+            
+    +e.line._triple
+      +field({
+        name: 'Страна',
+        placeholder: '',
+        type: 'text'
+      })
+      +field({
+        name: 'Курорт',
+        placeholder: '',
+        type: 'text'
+      })
+      +field({
+        name: 'Отель',
+        placeholder: '',
+        type: 'text'
+      })
+    
+    +e.line
+      +textarea({
+        name: 'Отзыв:',
+        placeholder: 'Не более 1000 символов',
+        required: true,
+        style: '_size-l'
+      })
+    
+    +e.submit
+      +b.BUTTON.button._highlight._size-wide
+        span Отправить отзыв
+    
+
+mixin formOnline
+  +b.FORM.form._online
+    +e.line
+      +field({
+        name: 'Фамилия',
+        type: 'text'
+      })
+    +e.line
+      +field({
+        name: 'Имя',
+        type: 'text'
+      })
+    +e.line
+      +field({
+        name: 'Отчество',
+        type: 'text'
+      })
+    +e.line._triple
+      +b.LABEL.field
+        +e.SPAN.caption Дата рождения
+        +b.select._field
+          select
+            option(disabled selected) День
+            option 1
+            option 3
+            option 5
+            option 6
+            option 7
+            option 30
+
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Месяц
+            option Январь
+            option Март
+            option Апрель
+            option Май
+            option Август
+            option Сентябрь
+            
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Год
+            option 1990
+            option 1991
+            option 1993
+            option 1995
+            option 1999
+            option 2000
+            
+    +e.line
+      +b.field
+        +e.SPAN.caption Пол
+        +e.DIV.input._checkboxes
+          +radio({
+            name: 'Мужской',
+            radio: 'sex',
+            state: true
+          })
+          +radio({
+            name: 'Женский',
+            radio: 'sex',
+            state: false
+          })
+          
+    +e.line._double
+      +b.LABEL.field
+        +e.SPAN.caption Гражданство
+        +b.select._field._full
+          select
+            option Российская Федерация
+            option Украина
+            option США
+            
+      +b.LABEL.field
+        +e.SPAN.caption Номер паспорта
+        +e.inputs
+          +e.DIV.input._size-s
+            +e.INPUT(type="text")
+          +e.DIV.input._size-m
+            +e.INPUT(type="text")
+          
+    +e.line
+      +field({
+        name: 'Кем выдан',
+        type: 'text'
+      })
+      
+    +e.line
+      +field({
+        name: 'Адрес по прописке',
+        type: 'text'
+      })
+      
+    +e.line._double
+      +field({
+        name: 'E-mail',
+        type: 'email'
+      })
+      +field({
+        name: 'Номер моб. телефона',
+        type: 'text'
+      })
+      
+    +e.submit
+      +b.BUTTON.button._highlight._size-wide
+        span Следующий шаг
+    

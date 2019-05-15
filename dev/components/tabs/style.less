@@ -1,0 +1,122 @@
+.tabs {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none
+  }
+
+  &__item {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    min-width: 241px;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    margin-right: 1px;
+    font-weight: 600;
+    text-align: center;
+    background: @colorBorder;
+    cursor: pointer;
+    border: 1px solid @colorBorder;
+    border-bottom: none;
+    transition: all @transitionSpeedDefault;
+
+    &:hover {
+      color: @colorTextLight;
+      background: @colorMain;
+      border-color: @colorMain;
+    }
+
+    &.selected {
+      color: currentColor;
+      background: @colorBgLight;
+      pointer-events: none;
+    }
+  }
+}
+
+[data-tabs-content] [data-tab] {
+  display: none;
+
+  &.showing {
+    display: block;
+  }
+}
+
+.sidebar-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 280px;
+
+  &__item {
+    position: relative;
+    display: block;
+    font-weight: 600;
+    color: @colorLink;
+    box-shadow: 0 0 0 1px @colorBorder;
+    border-radius: 5px;
+    margin: 0 0 5px;
+    background: @colorBgLight;
+    transition: all @transitionSpeedDefault;
+
+    &:hover {
+      color: @colorTextLight;
+      background: @colorLink;
+      border-color: @colorLink;
+    }
+
+    a {
+      display: block;
+      padding: 0 10px;
+      height: 40px;
+      line-height: 40px;
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    .ico {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+}
+
+.content-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: @fontSizeDefaultS;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px 0 0;
+    color: @colorLink;
+    box-shadow: 0 0 0 1px @colorLink;
+    border-radius: 5px;
+    background: rgba(47, 128, 237, 0.2);
+    transition: all @transitionSpeedDefault;
+
+    &:hover {
+      background: @colorLink;
+      color: @colorTextLight;
+    }
+
+    a {
+      display: block;
+      padding: 0 11px 0 12px;
+      height: 40px;
+      line-height: 40px;
+      white-space: nowrap;
+      color: currentColor;
+      text-decoration: none;
+    }
+  }
+}

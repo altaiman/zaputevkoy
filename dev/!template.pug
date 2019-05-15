@@ -1,0 +1,29 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header
+		
+		+e.MAIN.content(role="main")
+			+e.container.container
+			
+		+footer
+		+scripts

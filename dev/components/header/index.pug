@@ -1,0 +1,49 @@
+include ../global.pug
+
+include ../common/logotype.pug
+include ../social/index.pug
+include ../countries/index.pug
+include ../search/index.pug
+
+include nav.pug
+
+mixin header(data)
+  +b.HEADER.header(role="banner")
+    +e.top
+      +e.container.container
+        +e.block
+          +logotype
+        +e.block
+          +e.contacts
+            span пн-вс 10:00 – 22:00
+            +b.A.tel(href="tel:+78123856868") +7 (812) 385-68-68
+        +e.block
+          +social
+        +e.block
+          +b.BUTTON.button._highlight(data-modal-open="order")
+            span Оставить заявку
+    +e.main
+      +e.container.container
+        +nav
+        +countries
+        +search
+        
+mixin headerHotel
+  +b.HEADER.header(role="banner")
+    +e.top
+      +e.container.container
+        +e.block
+          +logotype
+        +e.block
+          +e.contacts
+            span пн-вс 10:00 – 22:00
+            +b.A.tel(href="tel:+78123856868") +7 (812) 385-68-68
+        +e.block
+          +social
+        +e.block
+          +b.BUTTON.button._highlight(data-modal-open="order")
+            span Оставить заявку
+    +e.main
+      +e.container.container
+        +nav
+        +countries

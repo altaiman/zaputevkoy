@@ -1,0 +1,127 @@
+include ../global.pug
+include data.pug
+
+mixin reviews
+  +b.reviews(data-limit="3")
+    +e.UL.list(data-limit-list)
+      +e.LI.item
+        +review
+      +e.LI.item
+        +review
+      +e.LI.item
+        +review
+      +e.LI.item
+        +review
+      +e.LI.item
+        +review
+                  
+    +b.BUTTON.button__._highlight(data-limit-disable)
+      span Показать еще 2 отзыва
+    
+mixin review
+  +b.review
+    +e.header
+      +e.rating
+        span 4.0
+      +e.author
+        span Алина
+      +e.date
+        span Май 2017
+    +e.content
+      +e.line
+        +e.block._title
+          span Достоинства:
+        +e.block._text
+          p. 
+            Отель Moonlight Hotel представляет собой небольшое пятиэтажное здание 
+            золотисто-желтого цвета, под стать названию. Он предлагает к размещению 
+            стандартные номера с кафельными полами и скромной деревянной мебелью.
+      +e.line
+        +e.block._title
+          span Недостатки:
+        +e.block._text
+          p. 
+            Декор комнат тоже весьма аскетичен, но если в отеле турист собирается только 
+            ночевать, он по достоинству оценит удобство кроватей и продуманность обстановки. 
+            Каждый номер оборудован кондиционером, телефоном и спутниковым телевидением. 
+            С небольших балконов открывается вид на море или город.
+            
+mixin reviewPageShort
+  +b.review-page
+    +e.header
+      +e.title
+        +e.SPAN.caption Иванов Иван Иванович
+        +e.SPAN.location Санкт-Петербург   /   Вьетнам, Нячанг, GOLDEN LOTUS HOTEL 2*
+      +e.date
+        span 19.02.2019
+        +b.grade._good
+          +svg({
+            name: 'ico-star'
+          })
+    +e.content
+      +e.text
+        p. 
+          Отель Moonlight Hotel представляет собой небольшое пятиэтажное здание 
+          золотисто-желтого цвета, под стать названию. Он предлагает к размещению 
+          стандартные номера с кафельными полами и скромной деревянной мебелью.
+          
+mixin reviewPageMore
+  +b.review-page(data-more-action)
+    +e.header
+      +e.title
+        +e.SPAN.caption Иванов Иван Иванович
+        +e.SPAN.location Санкт-Петербург   /   Вьетнам, Нячанг, GOLDEN LOTUS HOTEL 2*
+      +e.date
+        span 19.02.2019
+        +b.grade._bad
+          +svg({
+            name: 'ico-star'
+          })
+    +e.content
+      +e.text
+        p. 
+          Отель Moonlight Hotel представляет собой небольшое пятиэтажное здание 
+          золотисто-желтого цвета, под стать названию. Он предлагает к размещению 
+          стандартные номера с кафельными полами и скромной деревянной мебелью.
+          
+        p. 
+          Отель Moonlight Hotel представляет собой небольшое пятиэтажное здание 
+          золотисто-желтого цвета, под стать названию. Он предлагает к размещению 
+          стандартные номера с кафельными полами и скромной деревянной мебелью.
+      
+      +e.footer
+        +e.BUTTON.more(data-toggle="Свернуть" data-more) 
+          span Развернуть
+          
+    block
+
+mixin reviewPageFull
+  +reviewPageMore
+    +e.answer
+      +e.header
+        +e.SPAN.caption Ответ агенства Запутевкой.рф
+      +e.content
+        +e.text._answer
+          p. 
+            Отель Moonlight Hotel представляет собой небольшое пятиэтажное здание 
+            золотисто-желтого цвета, под стать названию. Он предлагает к размещению 
+            стандартные номера с кафельными полами и скромной деревянной мебелью.
+            
+      +e.SPAN.caption._answer Руководство сети туристических агенств ЗаПутевкой.рф
+      
+          
+mixin reviewsPage
+  +b.reviews
+    +e.UL.list
+      +e.LI.item._page
+        +reviewPageShort  
+      +e.LI.item._page
+        +reviewPageMore
+      +e.LI.item._page
+        +reviewPageFull
+      +e.LI.item._page
+        +reviewPageShort  
+      +e.LI.item._page
+        +reviewPageMore
+      +e.LI.item._page
+        +reviewPageFull

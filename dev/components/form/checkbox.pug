@@ -1,0 +1,22 @@
+include ../global.pug
+include data.pug
+
+mixin checkbox(data)
+  +b.LABEL.checkbox
+    input(type="checkbox" checked=data.state)
+    +e.DIV.box
+    +e.DIV.content
+      +e.P= data.name
+
+mixin radio(data)
+  +b.LABEL.checkbox
+    input(type="radio" name=data.radio checked=data.state)
+    +e.DIV.box
+    +e.DIV.content
+      +e.P= data.name
+
+mixin checkboxDropdown(data)
+  +b.LABEL.checkbox._dropdown
+    input(type="checkbox" checked=data.state)
+    +e.DIV.box
+    +e.span= data.name

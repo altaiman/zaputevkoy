@@ -1,0 +1,22 @@
+.positionCenter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.shadow(@radius, @offset-x, @offset-y, @color) {
+	box-shadow: @offset-x @offset-y @radius @color;
+}
+
+.arrow(@color) {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgOCA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xLjQxNDIxIDBDMC41MjMzMDkgMCAwLjA3NzE0MiAxLjA3NzE0IDAuNzA3MTA3IDEuNzA3MTFMMy4yOTI4OSA0LjI5Mjg5QzMuNjgzNDIgNC42ODM0MiA0LjMxNjU4IDQuNjgzNDIgNC43MDcxMSA0LjI5Mjg5TDcuMjkyOSAxLjcwNzExQzcuOTIyODYgMS4wNzcxNCA3LjQ3NjY5IDAgNi41ODU3OSAwSDEuNDE0MjFaIiBmaWxsPSIjMkI5MkU0Ii8+PC9zdmc+);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check(@color) {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEzIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEuMDU3NTUgMy41TDQuOTI1OTggN0wxMS41NTc2IDEiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=);
+	background-repeat: no-repeat;
+	background-position: center;
+}

@@ -1,0 +1,41 @@
+include ../global.pug
+
+include ../common/logotype.pug
+include ../header/nav.pug
+
+mixin footer
+  +b.FOOTER.footer
+    +e.top
+      +e.container.container
+        +e.block
+          +nav-footer
+          
+        +e.block
+          +b.FORM.form
+            +b.LABEL.field._btn
+              +e.DIV.input._with-button
+                +e.INPUT(type="search" placeholder="Поиск по сайту")
+                +e.BUTTON.btn
+                  +svg({
+                    name: 'ico-search'
+                  })
+          +b.BUTTON.button
+            span Жалоба директору
+            
+    +e.main
+      +e.container.container
+        +e.block
+          +logotype-footer
+        +e.block
+          +e.contacts
+            +b.A.tel(href="tel:+78123856868") +7 (812) 385-68-68
+            span пн-вс 10:00 – 22:00
+        
+        +e.block
+          span Мы в соц сетях
+          +social-footer
+        
+        +e.block
+          +b.BUTTON.button._transparent(data-modal-open="order")
+            span Оставить заявку
+          p &copy; 2019 Запутевкой.рф

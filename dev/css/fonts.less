@@ -1,0 +1,92 @@
+/* fonts */
+
+@fontSizeDefault: 14px;
+
+@fontSizeDefaultM: round(@fontSizeDefault * 1.07); // 15px
+@fontSizeDefaultS: round(@fontSizeDefault * .85); // 12px
+@fontSizeCaptionS: round(@fontSizeCaption * .8); // 20px
+@fontSizeCaption: round(@fontSizeDefault * 1.78); // 25px
+@fontSizeCaptionL: round(@fontSizeCaption * 1.2); // 30px
+@fontSizeCaptionXL: round(@fontSizeCaption * 1.4); // 35px
+@fontSizeTitle: round(@fontSizeDefault * 2.14); // 30px
+@fontSizeTitleL: round(@fontSizeTitle * 1.33); // 40px
+@fontSizeLabel: round(@fontSizeDefault * .625); // 10px?
+
+.fontCaption {
+  font-size: @fontSizeCaption;
+  line-height: round(@fontSizeCaption * 1.4);
+  font-weight: 600;
+}
+
+.fontCaptionS {
+  font-size: @fontSizeCaptionS;
+  line-height: round(@fontSizeCaptionS * 1.4);
+  font-weight: 700;
+}
+
+.fontCaptionL {
+  font-size: @fontSizeCaptionL;
+  line-height: round(@fontSizeCaptionL * 1.37);
+  font-weight: 700;
+}
+
+.fontCaptionXL {
+  font-size: @fontSizeCaptionXL;
+  line-height: round(@fontSizeCaptionL * 1.37);
+  font-weight: 700;
+}
+
+.fontParagraph {
+  font-size: @fontSizeDefaultM;
+  line-height: round(@fontSizeDefaultM * 1.33);
+}
+
+@fontPath: '../fonts';
+
+/* Font 1 */
+@font1_Name: 'Open Sans';
+@font1_FileName1: 'OpenSans-Regular';
+@font1_FileName2: 'OpenSans-SemiBold';
+@font1_FileName3: 'OpenSans-Bold';
+@font1_FileName4: 'OpenSans-Light';
+@font1_FileName5: 'OpenSans-ExtraBold';
+
+@font-face {
+    font-family: @font1_Name;
+    src: url('@{fontPath}/@{font1_FileName4}.woff2') format('woff2'),
+         url('@{fontPath}/@{font1_FileName4}.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @font1_Name;
+    src: url('@{fontPath}/@{font1_FileName1}.woff2') format('woff2'),
+         url('@{fontPath}/@{font1_FileName1}.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @font1_Name;
+    src: url('@{fontPath}/@{font1_FileName2}.woff2') format('woff2'),
+         url('@{fontPath}/@{font1_FileName2}.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @font1_Name;
+    src: url('@{fontPath}/@{font1_FileName3}.woff2') format('woff2'),
+         url('@{fontPath}/@{font1_FileName3}.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @font1_Name;
+    src: url('@{fontPath}/@{font1_FileName5}.woff2') format('woff2'),
+         url('@{fontPath}/@{font1_FileName5}.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}

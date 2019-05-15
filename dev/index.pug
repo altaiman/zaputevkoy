@@ -1,0 +1,97 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+
+include components/slider/index.pug
+include components/subscribe/index.pug
+include components/card/index.pug
+include components/achivments/index.pug
+include components/reviews/index.pug
+include components/modal/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section._backimage
+				+e.container.container
+					+sliderBanner
+				
+			+subscribe
+			
+			+b.SECTION.section._light
+				+e.container.container
+					+b.SPAN.title._centered Выгодные предложения туров
+					+b.items._quadruple
+						each item in cardsData
+							+cardSmall({
+								title: item.title,
+								image: item.image,
+								price: item.price,
+								text: item.text,
+								hot: true
+							})
+							
+					+e.footer
+						+b.A.button._highlight._size-wide(href="#all-offers") Смотреть все предложения
+						
+			+b.SECTION.section._backimage._sliders
+				+e.container.container
+					+b.SPAN.title._centered С нами выгодно и надежно
+					+b.SPAN.caption._padding Мы сотрудничаем с самыми крупными туроператорами
+					+sliderOperators
+					
+					+b.SPAN.caption._padding И сотрудничаем весьма успешно
+					+sliderCertificates
+					
+					+b.SPAN.caption._padding Мы являемся партнером и спонсором наших друзей
+					+sliderPartners
+					
+			+b.SECTION.section._light._achivments
+				+e.container.container
+					+b.SPAN.title._centered Наша работа - наша гордость
+					+achivments
+				
+			+b.SECTION.section._highlight
+				+e.container.container
+					+b.SPAN.title._centered Дополнительная выгода для наших клиентов!
+					+profit
+					
+			+b.SECTION.section._reviews
+				+e.container.container._flex
+					+e.block._main-less
+						+b.SPAN.title Отзывы о нашем агентстве
+						+b.block
+							+sliderReviews
+					
+					+e.block._sidebar-wide
+						+b.SPAN.title Мы Вконтакте
+						
+			+b.SECTION.section._light._feautures
+				+e.container.container
+					+b.SPAN.title._centered Путешествуйте! Мы сделали это доступным!
+					+feautures
+			
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

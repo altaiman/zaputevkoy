@@ -1,0 +1,154 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/achivments/index.pug
+include components/card/index.pug
+include components/sidebar/index.pug
+include components/tabs/index.pug
+include components/search/index.pug
+include components/reviews/index.pug
+include components/modal/index.pug
+include components/map/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+headerHotel
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+					+e.header
+						+breadcrumbs(['Поиск туров', 'Москва - Вьетнам, Нячанг'])
+						+b.SPAN.caption Москва - Вьетнам, Нячанг
+					
+					+b.block._links
+						+b.UL.links
+							+e.LI.item._selected
+								a(href="#description") Описание
+							+e.LI.item
+								a(href="#map") Расположение на карте
+							+e.LI.item
+								a(href="#information") Информация
+							+e.LI.item
+								a(href="#tours") Варианты туров
+							+e.LI.item
+								a(href="#reviews") Отзывы
+								
+					+cardHotel
+					
+					+b.SPAN.caption._padding Расположение на карте
+					+map
+					
+					+b.block._section._hotel
+						+e.header
+							+b.SPAN.caption._block Информация об отеле
+							+b.UL.info._hotel
+								+e.LI.cell
+									+e.SPAN.label Название:
+									+b.SPAN.caption Galaxy 3 Hotel 3 ***
+									+b.rating._no-more
+										+e.UL.list(data-value="3")
+											+e.LI.star
+												+svg({
+													name: 'ico-rating-star'
+												})
+											+e.LI.star
+												+svg({
+													name: 'ico-rating-star'
+												})
+											+e.LI.star
+												+svg({
+													name: 'ico-rating-star'
+												})
+									
+								+e.LI.cell
+									+e.SPAN.label Ссылка:
+									+b.A.link(href="#") http://g3.galaxynhatrang.com/VN/
+									+b.A.link(href="#") http://g3.galaxynhatrang.com/VN/
+								+e.LI.cell
+									+b.UL.info._horizontal
+										+e.LI.cell
+											+e.SPAN.label Адрес:
+											+e.SPAN.value Вьетнам, Нячанг
+										+e.LI.cell
+											+e.SPAN.label Телефон:
+											+e.SPAN.value +9 (123) 123-12-12
+										+e.LI.cell
+											+e.SPAN.label Телефон:
+											+e.SPAN.value +9 (123) 123-12-12
+						
+						+e.content
+							+feauturesHotel
+							+b.content._description
+								p. 
+									Современный отель "Galaxy 3 Hotel" расположен на одной из лучших пляжных зон Вьетнама, 
+									в городе Нячанг. Расположение отеля очень удобно относительно аэропорта (26 км). 
+									В ближайшем окружении отеля можно найти множество развлекательных мест, 
+									включая клуб парусного спорта.
+									
+								p. 
+									Отель состоит из 65 стандартных комнат, в которых предусмотрены все необходимые удобства. 
+									Во всех номерах отеля можно посмотреть программы кабельного телевидения и воспользоваться 
+									персональным баром с различными прохладительными напитками. Номера оснащены кондиционером 
+									и удобной мягкой мебелью. В числе других удобств имеется собственная ванная комната с 
+									душем и феном. На всей территории отеля действует бесплатный интернет. Рабочий персонал 
+									ежедневно заботится о поддержании чистоты, порядка и дружелюбной атмосферы в отеле.
+								
+								p.
+									Гостям предлагаются услуги трансфера, прачечной, хранение багажа. Также можно заказать 
+									напрокат велосипед и осмотреть красивые места и достопримечательности, находящиеся вблизи 
+									отеля. Общественный пляж с теневыми навесами и шезлонгами находится через дорогу от отеля. 
+									Постояльцы могут поиграть в пляжный волейбол или футбол, покататься на водных мотоциклах 
+									и катамаранах. В ресторане отеля предлагают блюда международной кухни, приготовленные из 
+									свежих и натуральных продуктов. Завтрак входит в стоимость проживания.
+
+								p Отель "Galaxy 3 Hotel" – место для приятного и спокойного отдыха.
+					
+					+search
+					
+					+b.SPAN.caption._padding Все варианты туров в отель Galaxy 3 Hotel 3*
+					
+					+b.block._content
+						+b.UL.items
+							+detailsHotel
+							+detailsHotel
+							+detailsHotel
+							+detailsHotel
+							+detailsHotel
+							
+					+e.footer
+						+b.A.button._highlight._size-wide-l
+							span Показать все 18
+							
+					+b.block._reviews
+						+b.SPAN.caption Отзывы
+						+reviews
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			+modalGallery
+			
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDEAqGnjqzZ1UyTc8nVEsEmf5kY4xhqo" async defer)
+		+scripts
+		script(src="js/maps.js")

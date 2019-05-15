@@ -1,0 +1,29 @@
+include ../global.pug
+include data.pug
+
+include office.pug
+
+mixin address
+  +b.FORM.address
+    +e.field
+      +b.LABEL.field._size-wide
+        +e.DIV.input
+          +e.INPUT(type="text" placeholder="Введите адрес")
+          +e.BUTTON.btn._gray
+            +svg({
+              name: 'ico-search'
+            })
+    +e.actions
+      +b.BUTTON.button._highlight._ico
+        +b.I.ico
+          +svg({
+            name: 'ico-list'
+          })
+        span Список
+          
+      +b.BUTTON.button._ico
+        +b.I.ico
+          +svg({
+            name: 'ico-place'
+          })
+        span Карта

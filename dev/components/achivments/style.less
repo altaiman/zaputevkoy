@@ -1,0 +1,264 @@
+.achivments {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 76px;
+    width: 300px;
+    margin: 0 40px 20px;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      content: '';
+      border-radius: 50%;
+      background: @colorHighlight;
+    }
+
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 18px;
+      transform: translateX(-50%) rotate(-45deg);
+      content: '';
+      width: 30px;
+      height: 18px;
+      border-left: 5px solid @colorBgLight;
+      border-bottom: 5px solid @colorBgLight;
+    }
+
+    .caption {
+      margin: 0 0 17px;
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-size: @fontSizeCaptionS;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.profit {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: calc(~'50% - 7px');
+    margin: 0 0 13px;
+  }
+
+  &__block {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 240px;
+    text-decoration: none;
+    color: currentColor;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__block_type-1 {
+    color: @colorTextLight;
+
+    .profit {
+      &__block-title {
+        width: 228px;
+      }
+    }
+  }
+
+  &__block_type-2 {
+    color: @colorTextDark;
+
+    .profit {
+      &__block-title {
+        width: 200px;
+      }
+    }
+  }
+
+  &__block-title {
+    position: absolute;
+    z-index: 3;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+
+.feautures {
+  padding: 20px 0 10px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 5px;
+    list-style: none;
+  }
+
+  &__item {
+    width: 44%;
+    margin: 0 0 32px;
+    padding-right: 5px;
+  }
+
+  &__more {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &::before {
+      position: absolute;
+      top: -1px;
+      left: -20px;
+      width: calc(~'100% + 40px');
+      height: 1px;
+      content: '';
+      background: @colorTextDark;
+    }
+
+    .button {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+
+.feautures_quadruple {
+  padding-bottom: 0;
+
+  .feautures {
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      display: flex;
+      width: 240px;
+      margin: 0 0 55px;
+
+      &:nth-child(4n + 1) {
+        .feauture_hotel {
+          padding-left: 44px;
+        }
+      }
+
+      &:nth-child(4n + 2) {
+        width: 390px;
+      }
+
+      &:nth-child(4n + 4) {
+        padding-left: 34px;
+        width: 290px;
+      }
+    }
+  }
+}
+
+.feauture {
+  position: relative;
+  padding-left: 50px;
+
+  &__ico {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: @colorHighlight;
+
+    svg {
+      .positionCenter();
+      fill: @colorBgLight;
+    }
+
+    svg:not([width]) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__header {
+    padding-top: 1px;
+
+    .caption {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__content {
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__caption {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.feauture_hotel {
+  padding-left: 40px;
+
+  .feauture {
+    &__ico {
+      top: -10px;
+      background: transparent;
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    &__content {
+      font-size: @fontSizeDefault;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.search {
+  width: 100%;
+  padding: 9px 10px;
+  margin: 0 0 30px;
+  border-radius: 5px;
+  background: @colorMain;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: @fontSizeDefaultM;
+  }
+
+  &__location {
+    margin: 0;
+    font-weight: 600;
+
+    a {
+      font-weight: normal;
+    }
+  }
+
+  &__form {
+    display: flex;
+    margin: 8px 0;
+  }
+
+  &__options {
+    display: flex;
+    width: calc(~'100% - 200px');
+    height: 50px;
+    background: @colorBgLight;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__submit {
+    width: 200px;
+
+    .button {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  &__select.select {
+    flex: 1 1 auto;
+    border-radius: 0;
+    border-right: 1px solid @colorBorder;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:nth-child(3) {
+      width: 236px;
+    }
+  }
+}
+
+.calendar {
+  font-size: @fontSizeDefaultM;
+  overflow: hidden;
+
+  &__header {
+    padding: 20px;
+    background: @colorBgMain;
+  }
+
+  &__months {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__months-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__months-item {
+    width: 33.333%;
+    text-align: center;
+    border-radius: 20px;
+    transition: all @transitionSpeedDefault;
+    // cursor: pointer;
+
+    // &:hover {
+    //   background: rgba(0, 0, 0, 0.1);
+    // }
+  }
+
+  &__progress {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    border-radius: 20px;
+    background: @colorBgLight;
+    pointer-events: none;
+    transition: all @transitionSpeedDefault;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__content {
+    position: relative;
+    padding: 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    padding: 0 30px 20px;
+
+    .link {
+      margin: 0 21px;
+      padding: 0;
+    }
+
+    .button {
+      width: 148px;
+    }
+  }
+
+  &__item {
+    width: 33.333%;
+    padding: 30px 20px;
+  }
+
+  &__controls {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: none;
+    border: none;
+    transform: rotate(-90deg);
+
+    svg {
+      fill: @colorTextGray;
+      max-width: 70%;
+      max-height: 70%;
+    }
+  }
+
+  &__arrow_prev {
+    transform: rotate(90deg);
+  }
+}
+
+.calendar[data-to] .datepicker--cell.-range-from- {
+  &::before {
+    display: block;
+  }
+}

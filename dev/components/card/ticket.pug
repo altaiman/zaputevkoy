@@ -1,0 +1,33 @@
+include ../global.pug
+include data.pug
+
+mixin ticket
+  +b.ticket
+    +e.number
+      span Номер тура: 6708
+    +b.price._ticket
+      +e.block
+        +e.P.text Общая стоимость тура	
+      +e.block
+        +e.value._old
+          span= toPrice(14208) + 'р'
+        +e.value
+          span= toPrice(67754) + ' р.'
+          
+    +b.BUTTON.button._highlight._full(data-modal-open="order")
+      span Оставить заявку
+    +b.BUTTON.button._full
+      span Купить онлайн
+    
+    +e.line
+      +e.cell
+        p Купить тур <strong>в рассрочку</strong>
+      +e.cell
+        +e.logo
+          img(src=global.paths.pictures+'banks/hcb.png' alt="Home Credit Bank")
+      +e.cell
+        +e.logo
+          img(src=global.paths.pictures+'banks/russtandart.png' alt="Банк Русский Стандарт")
+    +e.line
+      p Купить тур в <a href="#">офисах продаж</a>
+  

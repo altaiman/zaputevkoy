@@ -1,0 +1,57 @@
+include ../global.pug
+include data.pug
+
+mixin rating(value)
+  +b.rating
+    +e.UL.list(data-value=value)
+      +e.LI.star
+        +svg({
+          name: 'ico-star'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star'
+        })
+        
+mixin rating2()
+  +b.rating._no-more
+    +e.UL.list(data-value="3")
+      +e.LI.star
+        +svg({
+          name: 'ico-star2'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star2'
+        })
+      +e.LI.star
+        +svg({
+          name: 'ico-star2'
+        })
+        
+        
+mixin ratingHotel()
+  +b.rating._trip
+    +e.value
+      span 4,5
+    +e.list(data-value=4.5)
+      +e.progress
+      +e.circle
+      +e.circle
+      +e.circle
+      +e.circle
+      +e.circle
+
+  

@@ -1,0 +1,55 @@
+//- includes
+include components/head/index.pug
+include components/common/index.pug
+include components/svg/index.pug
+
+include components/header/index.pug
+include components/breadcrumbs/index.pug
+
+include components/pages/index.pug
+include components/search/index.pug
+include components/reviews/index.pug
+include components/modal/index.pug
+include components/form/index.pug
+
+include components/footer/index.pug
+include components/footer/scripts.pug
+
+//- end includes
+
+//- variables page 
+- 
+	pageSettings = {
+		title: 'Главная'
+	}
+
+doctype html
+html(lang=global.lang)
+	+head(pageSettings)
+	+b.BODY.page
+		+header({ search: true })
+		
+		+e.MAIN.content
+			+b.SECTION.section
+				+e.container.container
+					+e.header._reviews
+						+breadcrumbs(['Отзывы'])
+						+b.SPAN.caption Отзывы
+					
+					+b.block._form
+						+b.SPAN.caption Оставить отзыв
+						+formReview
+						
+					+pagesReviews
+					
+					+reviewsPage
+					
+					+pagesReviews
+					
+									
+		+footer
+		
+		+e.modals
+			+modalOrder
+			
+		+scripts

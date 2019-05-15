@@ -1,0 +1,23 @@
+include ../global.pug
+include data.pug
+
+mixin field(data)
+  +b.LABEL.field(class=data.style class=data.required ? '_required' : '')
+    +e.SPAN.caption= data.name
+    +e.DIV.input
+      +e.INPUT(type=data.type value=data.value placeholder=data.placeholder disabled=data.disabled)
+
+mixin textarea(data)
+  +b.LABEL.field(class=data.style class=data.required ? '_required' : '')
+    +e.SPAN.caption= data.name
+    +e.DIV.input._text
+      +e.TEXTAREA(value=data.value placeholder=data.placeholder disabled=data.disabled)
+
+mixin fieldMail
+  +b.LABEL.field
+    +e.DIV.input._with-button
+      +e.INPUT(type='email' placeholder='Email')
+      +e.BUTTON.btn
+        +svg({
+          name: 'ico-mail'
+        })

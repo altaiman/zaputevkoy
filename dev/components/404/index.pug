@@ -1,0 +1,22 @@
+include ../global.pug
+include data.pug
+
+mixin notFound404-1
+  +b.not-found._full
+    +e.SPAN.title Ой!
+    +e.content._right
+      +e.text
+        p Похоже, мы не можем  найти нужную вам страницу
+        
+      +e.SPAN.code Код ошибки: 404
+      
+mixin notFound404-2
+  +b.not-found._oops
+    +e.content
+      +e.SPAN.caption 404
+      +e.text._strong
+        p Кажется что то пошло не так!
+        
+      +b.A.button._highlight._size-wide(href="#") Вернуться назад
+      
+  
