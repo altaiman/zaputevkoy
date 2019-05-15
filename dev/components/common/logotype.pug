@@ -2,8 +2,9 @@ include ../global.pug
 include data.pug
 
 mixin logotype()
-  +b.A.logotype(href="index.html")
-    +e.IMG(src=global.paths.images+'logotype.svg' alt="ЗаПутёвкой.рф" title="ЗаПутёвкой.рф - Сеть туристических агенств")
+  +b.H1.logotype
+    a(href="index.html")
+      +e.IMG(src=global.paths.images+'logotype.svg' alt="ЗаПутёвкой.рф" title="ЗаПутёвкой.рф - Сеть туристических агенств")
 
 mixin logotype-footer()
   +b.A.logotype(href="index.html")

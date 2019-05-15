@@ -38,7 +38,7 @@ html(lang=global.lang)
 			
 			+b.SECTION.section._light
 				+e.container.container
-					+b.SPAN.title._centered Выгодные предложения туров
+					+b.H2.title._centered Выгодные предложения туров
 					+b.items._quadruple
 						each item in cardsData
 							+cardSmall({
@@ -54,39 +54,39 @@ html(lang=global.lang)
 						
 			+b.SECTION.section._backimage._sliders
 				+e.container.container
-					+b.SPAN.title._centered С нами выгодно и надежно
-					+b.SPAN.caption._padding Мы сотрудничаем с самыми крупными туроператорами
+					+b.H2.title._centered С нами выгодно и надежно
+					+b.H3.caption._padding Мы сотрудничаем с самыми крупными туроператорами
 					+sliderOperators
 					
-					+b.SPAN.caption._padding И сотрудничаем весьма успешно
+					+b.H3.caption._padding И сотрудничаем весьма успешно
 					+sliderCertificates
 					
-					+b.SPAN.caption._padding Мы являемся партнером и спонсором наших друзей
+					+b.H3.caption._padding Мы являемся партнером и спонсором наших друзей
 					+sliderPartners
 					
 			+b.SECTION.section._light._achivments
 				+e.container.container
-					+b.SPAN.title._centered Наша работа - наша гордость
+					+b.H2.title._centered Наша работа - наша гордость
 					+achivments
 				
 			+b.SECTION.section._highlight
 				+e.container.container
-					+b.SPAN.title._centered Дополнительная выгода для наших клиентов!
+					+b.H2.title._centered Дополнительная выгода для наших клиентов!
 					+profit
 					
 			+b.SECTION.section._reviews
 				+e.container.container._flex
 					+e.block._main-less
-						+b.SPAN.title Отзывы о нашем агентстве
+						+b.H2.title Отзывы о нашем агентстве
 						+b.block
 							+sliderReviews
 					
 					+e.block._sidebar-wide
-						+b.SPAN.title Мы Вконтакте
+						+b.H2.title Мы Вконтакте
 						
 			+b.SECTION.section._light._feautures
 				+e.container.container
-					+b.SPAN.title._centered Путешествуйте! Мы сделали это доступным!
+					+b.H2.title._centered Путешествуйте! Мы сделали это доступным!
 					+feautures
 			
 		+footer

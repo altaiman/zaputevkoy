@@ -17,11 +17,11 @@ mixin countries
 
 mixin country(data)
   +b.A.country(href="#")
-    +e.title
-      +e.flag
+    +e.DIV.title
+      +e.DIV.flag
         img(src=global.paths.images+'flags/'+data.flag alt=data.title)
       span= data.title
-    +e.price
+    +e.DIV.price
       span от <strong>#{data.price}</strong> р
         
         
