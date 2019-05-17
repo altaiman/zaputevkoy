@@ -546,7 +546,11 @@
       let modal = new tingle.modal({
         closeMethods: ['overlay', 'escape'],
         onClose: function() {
-          this.remove()
+          try {
+            this.remove()
+          } catch (e) {
+
+          }
         },
         cssClass: modalElement.classList
       });
@@ -613,7 +617,11 @@
       let modal = new tingle.modal({
         closeMethods: ['overlay', 'escape'],
         onClose: function() {
-          this.remove()
+          try {
+            this.remove()
+          } catch (e) {
+
+          }
         },
         cssClass: ['modal', 'modal_gallery'],
       });

@@ -225,32 +225,18 @@
       outline: none;
     }
 
-    &::before,
-    &::after {
+    svg {
       .positionCenter();
-      content: '';
-      border-radius: 1px;
-      background: currentColor;
-      transition: inherit;
-    }
-
-    &::before {
-      width: 12px;
-      height: 3px;
-    }
-
-    &::after {
-      width: 3px;
-      height: 12px;
+      max-width: 14px;
+      max-height: 14px;
+      fill: currentColor;
+      transition: all .1s;
+      pointer-events: none;
     }
   }
 
   &__btn_minus {
     left: 0;
-
-    &::after {
-      display: none;
-    }
   }
 
   &__btn_plus {
@@ -337,25 +323,17 @@
       outline: none;
     }
 
-    &::before,
-    &::after {
+    &::before {
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 12px;
-      height: 3px;
       content: '';
-      background: currentColor;
-      border-radius: 1px;
-      transition: inherit;
-    }
-
-    &::before {
+      width: 14px;
+      height: 14px;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMyAxMiI+ICA8cmVjdCB3aWR0aD0iMTIiIGhlaWdodD0iMi44IiB4PSI4IiBmaWxsPSIjMzMzIiByeD0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgOCAwKSIvPiAgPHJlY3Qgd2lkdGg9IjEyIiBoZWlnaHQ9IjIuOCIgeD0iMTIuNiIgeT0iNy40IiBmaWxsPSIjMzMzIiByeD0iMSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE4MCAxMi42IDcuNCkiLz48L3N2Zz4=);
+      background-repeat: no-repeat;
+      background-position: center;
       transform: translate(-50%,-50%) rotate(45deg);
-    }
-
-    &::after {
-      transform: translate(-50%,-50%) rotate(-45deg);
     }
   }
 }
@@ -527,6 +505,8 @@
 .datepicker--cell.-range-to- {
   &::before {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: -1;
     height: 40px;
     width: 20px;

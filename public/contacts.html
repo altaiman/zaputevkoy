@@ -388,10 +388,16 @@
                   <div class="select__dropdown">
                     <div class="counter">
                       <button class="counter__btn counter__btn_minus" data-counter-control="0">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-minus"></use>
+                        </svg>
                       </button>
                       <div class="counter__value" data-counter-value="2"><span>взрослых</span>
                       </div>
                       <button class="counter__btn counter__btn_plus" data-counter-control="1">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-plus"></use>
+                        </svg>
                       </button>
                     </div>
                     <div class="selector" data-selector="data-selector"><input class="selector__input" type="text"/>
@@ -448,10 +454,16 @@
                   <div class="select__dropdown">
                     <div class="counter counter_btns">
                       <button class="counter__btn counter__btn_minus" data-counter-control="0">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-minus"></use>
+                        </svg>
                       </button>
                       <div class="counter__value counter__value_hidden" data-counter-value="2">
                       </div>
                       <button class="counter__btn counter__btn_plus" data-counter-control="1">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-plus"></use>
+                        </svg>
                       </button>
                     </div>
                     <div class="select__line">
@@ -490,7 +502,7 @@
           </div>
           <h3 class="caption caption_centered">Офисы в Санкт - Петербурге
           </h3>
-          <div class="block block_form block_address">
+          <div class="block block_form block_address" data-more-action="data-more-action">
             <form class="address">
               <div class="address__field">
                 <label class="field field_size-wide">
@@ -503,13 +515,11 @@
                   </div>
                 </label>
               </div>
-              <div class="address__actions">
-                <button class="button button_highlight button_ico"><i class="ico">
-                  <svg>
-                    <use xlink:href="img/symbols.svg#svg-ico-list"></use>
-                  </svg></i><span>Список</span>
-                </button>
-                <button class="button button_ico"><i class="ico">
+              <div class="address__actions"><a class="button button_highlight button_ico" href="#contacts-list"><i class="ico">
+                <svg>
+                  <use xlink:href="img/symbols.svg#svg-ico-list"></use>
+                </svg></i><span>Список</span></a>
+                <button class="button button_ico" data-more="data-more" data-toggle="Скрыть"><i class="ico">
                   <svg>
                     <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                   </svg></i><span>Карта</span>
@@ -527,7 +537,7 @@
               </p>
             </div>
           </div>
-          <div class="items">
+          <div class="items" id="contacts-list">
             <div class="office show-more" data-more-action="data-more-action">
               <div class="office__header">
                 <div class="office__label">

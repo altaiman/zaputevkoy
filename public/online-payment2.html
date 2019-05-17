@@ -388,10 +388,16 @@
                   <div class="select__dropdown">
                     <div class="counter">
                       <button class="counter__btn counter__btn_minus" data-counter-control="0">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-minus"></use>
+                        </svg>
                       </button>
                       <div class="counter__value" data-counter-value="2"><span>взрослых</span>
                       </div>
                       <button class="counter__btn counter__btn_plus" data-counter-control="1">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-plus"></use>
+                        </svg>
                       </button>
                     </div>
                     <div class="selector" data-selector="data-selector"><input class="selector__input" type="text"/>
@@ -448,10 +454,16 @@
                   <div class="select__dropdown">
                     <div class="counter counter_btns">
                       <button class="counter__btn counter__btn_minus" data-counter-control="0">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-minus"></use>
+                        </svg>
                       </button>
                       <div class="counter__value counter__value_hidden" data-counter-value="2">
                       </div>
                       <button class="counter__btn counter__btn_plus" data-counter-control="1">
+                        <svg>
+                          <use xlink:href="img/symbols.svg#svg-ico-plus"></use>
+                        </svg>
                       </button>
                     </div>
                     <div class="select__line">
@@ -596,135 +608,442 @@
               </div>
               <div class="block__tabs-content" data-tabs-content="online">
                 <div data-tab="0">
-                  <div class="step">
-                    <div class="step__state"><strong>1</strong><span>шаг</span>
-                    </div>
-                    <div class="step__title">
-                      <h3 class="caption">Введите данные гражданского паспорта
-                      </h3>
-                      <p>все данные вводятся так, как указано в паспорте</p>
-                    </div>
-                  </div>
-                  <form class="form form_online">
-                    <div class="form__line">
-                      <label class="field"><span class="field__caption">Фамилия</span>
-                        <div class="field__input"><input type="text"/>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="form__line">
-                      <label class="field"><span class="field__caption">Имя</span>
-                        <div class="field__input"><input type="text"/>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="form__line">
-                      <label class="field"><span class="field__caption">Отчество</span>
-                        <div class="field__input"><input type="text"/>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="form__line form__line_triple">
-                      <label class="field"><span class="field__caption">Дата рождения</span><span class="select select_field">
-                        <select>
-                          <option disabled="disabled" selected="selected">День</option>
-                          <option>1</option>
-                          <option>3</option>
-                          <option>5</option>
-                          <option>6</option>
-                          <option>7</option>
-                          <option>30</option>
-                        </select></span>
-                      </label>
-                      <label class="field"><span class="select select_field">
-                        <select>
-                          <option disabled="disabled" selected="selected">Месяц</option>
-                          <option>Январь</option>
-                          <option>Март</option>
-                          <option>Апрель</option>
-                          <option>Май</option>
-                          <option>Август</option>
-                          <option>Сентябрь</option>
-                        </select></span>
-                      </label>
-                      <label class="field"><span class="select select_field">
-                        <select>
-                          <option disabled="disabled" selected="selected">Год</option>
-                          <option>1990</option>
-                          <option>1991</option>
-                          <option>1993</option>
-                          <option>1995</option>
-                          <option>1999</option>
-                          <option>2000</option>
-                        </select></span>
-                      </label>
-                    </div>
-                    <div class="form__line">
-                      <div class="field"><span class="field__caption">Пол</span>
-                        <div class="field__input field__input_checkboxes">
-                          <label class="checkbox">
-                            <input type="radio" name="sex" checked="checked"/>
-                            <div class="checkbox__box">
-                            </div>
-                            <div class="checkbox__content">
-                              <p>Мужской
-                              </p>
-                            </div>
-                          </label>
-                          <label class="checkbox">
-                            <input type="radio" name="sex"/>
-                            <div class="checkbox__box">
-                            </div>
-                            <div class="checkbox__content">
-                              <p>Женский
-                              </p>
-                            </div>
-                          </label>
-                        </div>
+                  <div class="step-content step-content_current" data-step-content="0">
+                    <div class="step">
+                      <div class="step__state"><strong>1</strong><span>шаг</span>
+                      </div>
+                      <div class="step__title">
+                        <h3 class="caption">Введите данные гражданского паспорта
+                        </h3>
+                        <p>все данные вводятся так, как указано в паспорте</p>
                       </div>
                     </div>
-                    <div class="form__line form__line_double">
-                      <label class="field"><span class="field__caption">Гражданство</span><span class="select select_field select_full">
-                        <select>
-                          <option>Российская Федерация</option>
-                          <option>Украина</option>
-                          <option>США</option>
-                        </select></span>
-                      </label>
-                      <label class="field"><span class="field__caption">Номер паспорта</span><span class="field__inputs">
-                        <div class="field__input field__input_size-s"><input type="text"/>
+                    <form class="form form_online">
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Фамилия</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Имя</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Отчество</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line form__line_triple">
+                        <label class="field"><span class="field__caption">Дата рождения</span><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">День</option>
+                            <option>1</option>
+                            <option>3</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>30</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Месяц</option>
+                            <option>Январь</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Год</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1993</option>
+                            <option>1995</option>
+                            <option>1999</option>
+                            <option>2000</option>
+                          </select></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <div class="field"><span class="field__caption">Пол</span>
+                          <div class="field__input field__input_checkboxes">
+                            <label class="checkbox">
+                              <input type="radio" name="sex" checked="checked"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Мужской
+                                </p>
+                              </div>
+                            </label>
+                            <label class="checkbox">
+                              <input type="radio" name="sex"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Женский
+                                </p>
+                              </div>
+                            </label>
+                          </div>
                         </div>
-                        <div class="field__input field__input_size-m"><input type="text"/>
-                        </div></span>
-                      </label>
+                      </div>
+                      <div class="form__line form__line_double">
+                        <label class="field"><span class="field__caption">Гражданство</span><span class="select select_field select_full">
+                          <select>
+                            <option>Российская Федерация</option>
+                            <option>Украина</option>
+                            <option>США</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="field__caption">Номер паспорта</span><span class="field__inputs">
+                          <div class="field__input field__input_size-s"><input type="text"/>
+                          </div>
+                          <div class="field__input field__input_size-m"><input type="text"/>
+                          </div></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Кем выдан</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Адрес по прописке</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line form__line_double">
+                        <label class="field"><span class="field__caption">E-mail</span>
+                          <div class="field__input"><input type="email"/>
+                          </div>
+                        </label>
+                        <label class="field"><span class="field__caption">Номер моб. телефона</span>
+                          <div class="field__input"><input type="tel"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__submit">
+                        <button class="button button_highlight button_size-wide" data-step-button="next"><span>Следующий шаг</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="step-content" data-step-content="1">
+                    <div class="step">
+                      <div class="step__state"><strong>2</strong><span>шаг</span>
+                      </div>
+                      <div class="step__title">
+                        <h3 class="caption">Заполните данные о туристах из загранспаспортов
+                        </h3>
+                        <p>все данные вводятся так, как указано в паспорте</p>
+                      </div>
                     </div>
-                    <div class="form__line">
-                      <label class="field"><span class="field__caption">Кем выдан</span>
-                        <div class="field__input"><input type="text"/>
+                    <form class="form form_online">
+                      <div class="form__line-caption"> <span>1 взрослый</span>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Фамилия - Латиницей</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Имя - Латиницей</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line form__line_triple">
+                        <label class="field"><span class="field__caption">Дата рождения</span><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">День</option>
+                            <option>1</option>
+                            <option>3</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>30</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Месяц</option>
+                            <option>Январь</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Год</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1993</option>
+                            <option>1995</option>
+                            <option>1999</option>
+                            <option>2000</option>
+                          </select></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <div class="field"><span class="field__caption">Пол</span>
+                          <div class="field__input field__input_checkboxes">
+                            <label class="checkbox">
+                              <input type="radio" name="sex" checked="checked"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Мужской
+                                </p>
+                              </div>
+                            </label>
+                            <label class="checkbox">
+                              <input type="radio" name="sex"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Женский
+                                </p>
+                              </div>
+                            </label>
+                          </div>
                         </div>
-                      </label>
-                    </div>
-                    <div class="form__line">
-                      <label class="field"><span class="field__caption">Адрес по прописке</span>
-                        <div class="field__input"><input type="text"/>
+                      </div>
+                      <div class="form__line form__line_double">
+                        <label class="field"><span class="field__caption">Гражданство</span><span class="select select_field select_full">
+                          <select>
+                            <option>Российская Федерация</option>
+                            <option>Украина</option>
+                            <option>США</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="field__caption">Номер паспорта</span><span class="field__inputs">
+                          <div class="field__input field__input_size-s"><input type="text"/>
+                          </div>
+                          <div class="field__input field__input_size-m"><input type="text"/>
+                          </div></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Кем выдан</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Адрес по прописке</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Номер моб. телефона</span>
+                          <div class="field__input"><input type="tel"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line-caption"> <span>2 взрослый</span>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Фамилия - Латиницей</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Имя - Латиницей</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line form__line_triple">
+                        <label class="field"><span class="field__caption">Дата рождения</span><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">День</option>
+                            <option>1</option>
+                            <option>3</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>30</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Месяц</option>
+                            <option>Январь</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="select select_field">
+                          <select>
+                            <option disabled="disabled" selected="selected">Год</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1993</option>
+                            <option>1995</option>
+                            <option>1999</option>
+                            <option>2000</option>
+                          </select></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <div class="field"><span class="field__caption">Пол</span>
+                          <div class="field__input field__input_checkboxes">
+                            <label class="checkbox">
+                              <input type="radio" name="sex" checked="checked"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Мужской
+                                </p>
+                              </div>
+                            </label>
+                            <label class="checkbox">
+                              <input type="radio" name="sex"/>
+                              <div class="checkbox__box">
+                              </div>
+                              <div class="checkbox__content">
+                                <p>Женский
+                                </p>
+                              </div>
+                            </label>
+                          </div>
                         </div>
-                      </label>
-                    </div>
-                    <div class="form__line form__line_double">
-                      <label class="field"><span class="field__caption">E-mail</span>
-                        <div class="field__input"><input type="email"/>
+                      </div>
+                      <div class="form__line form__line_double">
+                        <label class="field"><span class="field__caption">Гражданство</span><span class="select select_field select_full">
+                          <select>
+                            <option>Российская Федерация</option>
+                            <option>Украина</option>
+                            <option>США</option>
+                          </select></span>
+                        </label>
+                        <label class="field"><span class="field__caption">Номер паспорта</span><span class="field__inputs">
+                          <div class="field__input field__input_size-s"><input type="text"/>
+                          </div>
+                          <div class="field__input field__input_size-m"><input type="text"/>
+                          </div></span>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Кем выдан</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Адрес по прописке</span>
+                          <div class="field__input"><input type="text"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__line">
+                        <label class="field field_size-full"><span class="field__caption">Номер моб. телефона</span>
+                          <div class="field__input"><input type="tel"/>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="form__submit form__submit_flex">
+                        <button class="button button_highlight button_size-wide" data-step-button="prev"><span>Предыдущий шаг</span>
+                        </button>
+                        <button class="button button_highlight button_size-wide" data-step-button="next"><span>Следующий шаг</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="step-content" data-step-content="2">
+                    <div class="step">
+                      <div class="step__state"><strong>3</strong><span>шаг</span>
+                      </div>
+                      <div class="step__title">
+                        <h3 class="caption">Ознакомьтесь с условием оферты
+                        </h3>
+                      </div>
+                      <ul class="list-count">
+                        <li class="list-count__item">
+                          <p>
+                            На указанный адрес электронной почты вам будет 
+                            выслано письмо с адресованной офертой в виде договора, 
+                            в котором уже будут автоматически внесены все данные 
+                            в отношении клиента и участников тура, а так же будет 
+                            присвоен индивидуальный номер заказа, который будет 
+                            соответствовать номеру договора.
+                          </p>
+                        </li>
+                        <li class="list-count__item">
+                          <p>
+                            Заказчик обязан внимательно прочитать текст присланного 
+                            договора, проверить правильность данных заказчика и 
+                            участников тура (данные которых вводились при 
+                            оформлении заявки). 
+                          </p>
+                        </li>
+                        <li class="list-count__item">
+                          <p>
+                            Осуществление заказчиком оплаты означает акцепт 
+                            полученного договора (адресной оферты) и всех условий, 
+                            указных в нем, что в соответствии со ст.ст. 161, 434, 
+                            438 ГК приравнивается к заключению договора в 
+                            письменной форме. Акцепт должен быть осуществлен не 
+                            позднее 12 часов с момента получения договора, в 
+                            противном случае оферта считается отозванной 
+                            Турагентством.
+                          </p>
+                        </li>
+                        <li class="list-count__item">
+                          <p>
+                            После акцептирования договора (осуществления оплаты), 
+                            права и обязательства сторон регулируется 
+                            непосредственно самим договором.
+                          </p>
+                        </li>
+                        <li class="list-count__item">
+                          <p>
+                            Всю необходимую информацию и соответствующие материалы 
+                            в отношении выбранного туристского продукта Компания 
+                            присылает Туристу на его электронную почту после 
+                            осуществления акцепта.
+                          </p>
+                        </li>
+                      </ul>
+                      <form class="form">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>С условиями оферты ознакомлен и принимаю
+                            </p>
+                          </div>
+                        </label>
+                        <div class="form__submit form__submit_flex">
+                          <button class="button button_highlight button_size-wide" data-step-button="prev"><span>Предыдущий шаг</span>
+                          </button>
+                          <button class="button button_highlight button_size-wide"><span>Оплатить</span>
+                          </button>
                         </div>
-                      </label>
-                      <label class="field"><span class="field__caption">Номер моб. телефона</span>
-                        <div class="field__input"><input type="tel"/>
-                        </div>
-                      </label>
+                      </form>
                     </div>
-                    <div class="form__submit">
-                      <button class="button button_highlight button_size-wide" data-step-button="next"><span>Следующий шаг</span>
-                      </button>
-                    </div>
-                  </form>
+                  </div>
                 </div>
                 <div data-tab="1">
                   <h3 class="caption">Инструкция он-лайн оплаты тура

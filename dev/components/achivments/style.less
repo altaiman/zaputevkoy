@@ -88,7 +88,15 @@
         }
 
         &__block-front {
+          z-index: -1;
           opacity: 0;
+          pointer-events: none;
+        }
+
+        &__block-back {
+          z-index: 3;
+          opacity: 1;
+          pointer-events: initial;
         }
       }
     }
@@ -109,7 +117,7 @@
     height: 100%;
     backface-visibility: hidden;
     opacity: 1;
-    transition: all .8s;
+    transition: all .8s, opacity .4s;
 
     img {
       position: absolute;
@@ -123,20 +131,22 @@
 
   &__block-back {
     position: absolute;
-    z-index: 3;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    // backface-visibility: hidden;
     background: white;
     color: #333333;
     padding: 20px;
     font-size: 17px;
     font-weight: 600;
     line-height: 1.4;
+    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotateY(-180deg);
+    transition: all .8s, opacity .4s;
+    pointer-events: none;
 
     strong {
       color: @colorHighlight;

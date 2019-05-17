@@ -129,9 +129,15 @@ mixin search
           +e.dropdown
             +b.counter
               +e.BUTTON.btn._minus(data-counter-control="0")
+                +svg({
+                  name: 'ico-minus'
+                })
               +e.value(data-counter-value="2")
                 span взрослых
               +e.BUTTON.btn._plus(data-counter-control="1")
+                +svg({
+                  name: 'ico-plus'
+                })
             
             +b.selector(data-selector)
               +e.INPUT.input(type="text")
@@ -177,8 +183,14 @@ mixin search
           +e.dropdown
             +b.counter._btns
               +e.BUTTON.btn._minus(data-counter-control="0")
+                +svg({
+                  name: 'ico-minus'
+                })
               +e.value._hidden(data-counter-value="2")
               +e.BUTTON.btn._plus(data-counter-control="1")
+                +svg({
+                  name: 'ico-plus'
+                })
             +e.line
               +checkboxDropdown({
                 name: '±2',

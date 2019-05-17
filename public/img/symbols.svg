@@ -1,5 +1,14 @@
 <svg>
 
+  <symbol id="svg-ico-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 4">
+    <rect width="12" height="2.8" x="12" y="3.4" rx="1" transform="rotate(-180 12 3.4)"/>
+  </symbol>
+
+  <symbol id="svg-ico-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12">
+    <rect width="12" height="2.8" x="8" rx="1" transform="rotate(90 8 0)"/>
+    <rect width="12" height="2.8" x="12.6" y="7.4" rx="1" transform="rotate(-180 12.6 7.4)"/>
+  </symbol>
+
   <symbol id="svg-social-fb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 20">
     <path d="M8.43 3.32h1.88V.14C10 .1 8.87 0 7.57 0 4.86 0 3 1.66 3 4.7v2.8H0v3.55h3V20h3.67v-8.95h2.87L10 7.5H6.67V5.05c0-1.03.28-1.73 1.76-1.73z"/>
   </symbol>
