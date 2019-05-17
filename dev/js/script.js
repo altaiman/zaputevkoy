@@ -164,7 +164,7 @@
         })
         select.classList.add('select_open')
 
-        new SimpleBar(select.querySelector('.select__dropdown'))
+        // new SimpleBar(select.querySelector('.select__dropdown'))
       }
     })
   })

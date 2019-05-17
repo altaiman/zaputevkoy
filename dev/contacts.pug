@@ -12,6 +12,7 @@ include components/reviews/index.pug
 include components/form/index.pug
 include components/modal/index.pug
 include components/contacts/index.pug
+include components/map/index.pug
 
 include components/footer/index.pug
 include components/footer/scripts.pug
@@ -41,6 +42,8 @@ html(lang=global.lang)
 					
 					+b.block._form._address
 						+address
+						+mapContacts
+						
 						+e.content._bg
 							p. 
 								Green Card является не единым соглашением, а совокупностью двусторонних 
@@ -59,3 +62,4 @@ html(lang=global.lang)
 			+modalOrder
 			
 		+scripts
+		script(src="js/maps.js")

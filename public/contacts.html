@@ -5,7 +5,9 @@
   <title>ЗаПутёвкой | Главная</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <meta name="viewport" content="width=1240, initial-scale=1, maximum-scale=1"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=1240, initial-scale=1, maximum-scale=1"/>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=669dcec3-3a8d-4676-ad47-f1c78ae06db0&amp;lang=ru_RU" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <body class="page">
     <header class="header" role="banner">
       <div class="header__top">
@@ -514,6 +516,8 @@
                 </button>
               </div>
             </form>
+            <div class="map map_contacts" id="map-contacts">
+            </div>
             <div class="block__content block__content_bg">
               <p>
                 Green Card является не единым соглашением, а совокупностью двусторонних 
@@ -1044,5 +1048,6 @@
     </div>
     <script src="js/libs.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/maps.js"></script>
   </body>
 </html>
