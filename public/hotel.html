@@ -195,7 +195,7 @@
             <ul class="links">
               <li class="links__item links__item_selected"><a href="#description">Описание</a>
               </li>
-              <li class="links__item"><a href="#map">Расположение на карте</a>
+              <li class="links__item"><a href="#mapSection">Расположение на карте</a>
               </li>
               <li class="links__item"><a href="#information">Информация</a>
               </li>
@@ -375,15 +375,15 @@
                       <p>Купить тур в <a href="#">офисах продаж</a></p>
                     </div>
                   </div>
-                </div><a class="button button_highlight button_full button_size-l" href="#">Еще 18 вариантов</a>
+                </div><a class="button button_highlight button_full button_size-l" href="#tours">Еще 18 вариантов</a>
               </div>
             </div>
           </div>
-          <h3 class="caption caption_padding">Расположение на карте
+          <h3 class="caption caption_padding" id="mapSection">Расположение на карте
           </h3>
           <div class="map" id="map">
           </div>
-          <div class="block block_section block_hotel">
+          <div class="block block_section block_hotel" id="information">
             <div class="block__header">
               <h3 class="caption caption_block">Информация об отеле
               </h3>
@@ -677,7 +677,7 @@
                   </button>
                 </div>
               </div>
-              <div class="content content_description">
+              <div class="content content_description" id="description">
                 <p>
                   Современный отель "Galaxy 3 Hotel" расположен на одной из лучших пляжных зон Вьетнама, 
                   в городе Нячанг. Расположение отеля очень удобно относительно аэропорта (26 км). 
@@ -719,16 +719,129 @@
             </div>
             <form class="search__form">
               <div class="search__options">
-                <div class="search__select select">
-                  <select>
-                    <optgroup label="Популярные">
-                      <option value="1">Турция</option>
-                      <option value="2">Греция</option>
-                      <option value="3">Кипр</option>
-                      <option value="4">Россия</option>
-                      <option value="5" selected="selected">Тайланд</option>
-                    </optgroup>
-                  </select>
+                <div class="search__select select" data-drop="data-drop">
+                  <button class="js-Dropdown-title">Все
+                  </button>
+                  <div class="select__dropdown"><span class="select__caption">Популярные:</span>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul><span class="select__caption">Все курорты:</span>
+                    <label class="field">
+                      <div class="field__input"><input type="text" placeholder="Поиск по курорту"/>
+                      </div>
+                    </label>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="search__select select select_size-s" data-drop="data-drop">
                   <button class="js-Dropdown-title">10.02 - 25.02
@@ -892,7 +1005,7 @@
               </div>
             </form>
           </div>
-          <h3 class="caption caption_padding">Все варианты туров в отель Galaxy 3 Hotel 3*
+          <h3 class="caption caption_padding" id="tours">Все варианты туров в отель Galaxy 3 Hotel 3*
           </h3>
           <div class="block block_content">
             <ul class="items">
@@ -1000,7 +1113,7 @@
           </div>
           <div class="section__footer"><a class="button button_highlight button_size-wide-l"><span>Показать все 18</span></a>
           </div>
-          <div class="block block_reviews">
+          <div class="block block_reviews" id="reviews">
             <h3 class="caption">Отзывы
             </h3>
             <div class="reviews" data-limit="3">
@@ -1307,7 +1420,7 @@
         </div>
       </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDEAqGnjqzZ1UyTc8nVEsEmf5kY4xhqo" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDEAqGnjqzZ1UyTc8nVEsEmf5kY4xhqo"></script>
     <script src="js/libs.js"></script>
     <script src="js/script.js"></script>
     <script src="js/maps.js"></script>

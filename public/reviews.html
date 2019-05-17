@@ -182,16 +182,129 @@
             </div>
             <form class="search__form">
               <div class="search__options">
-                <div class="search__select select">
-                  <select>
-                    <optgroup label="Популярные">
-                      <option value="1">Турция</option>
-                      <option value="2">Греция</option>
-                      <option value="3">Кипр</option>
-                      <option value="4">Россия</option>
-                      <option value="5" selected="selected">Тайланд</option>
-                    </optgroup>
-                  </select>
+                <div class="search__select select" data-drop="data-drop">
+                  <button class="js-Dropdown-title">Все
+                  </button>
+                  <div class="select__dropdown"><span class="select__caption">Популярные:</span>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul><span class="select__caption">Все курорты:</span>
+                    <label class="field">
+                      <div class="field__input"><input type="text" placeholder="Поиск по курорту"/>
+                      </div>
+                    </label>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="search__select select select_size-s" data-drop="data-drop">
                   <button class="js-Dropdown-title">10.02 - 25.02
@@ -415,7 +528,7 @@
                 </label>
               </div>
               <div class="form__line">
-                <label class="field field_size-l field_required"><span class="field__caption">Отзыв:</span>
+                <label class="field field_size-l field_size-full field_required"><span class="field__caption">Отзыв:</span>
                   <div class="field__input field__input_text"><textarea placeholder="Не более 1000 символов"></textarea>
                   </div>
                 </label>

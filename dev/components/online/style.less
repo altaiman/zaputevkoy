@@ -57,7 +57,7 @@
     margin: 0 auto;
   }
 
-  &[data-step="2"] {
+  &[data-step="1"] {
     .path {
       &__step {
         &:nth-child(1),
@@ -71,7 +71,7 @@
     }
   }
 
-  &[data-step="3"] {
+  &[data-step="2"] {
     .path {
       &__step {
         &:nth-child(1),
@@ -86,7 +86,7 @@
     }
   }
 
-  &[data-step="4"] {
+  &[data-step="3"] {
     .path {
       &__step {
         &:nth-child(1),
@@ -140,4 +140,12 @@
       margin: 0;
     }
   }
+}
+
+.step-content {
+  display: none;
+}
+
+.step-content_current {
+  display: block;
 }

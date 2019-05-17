@@ -530,11 +530,41 @@ input[type=number] {
 }
 
 .block_hotel {
-	// padding-top: 40px;
+	overflow: hidden;
 }
 
 .showing {
 	display: block;
+}
+
+.list-count {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	counter-reset: item;
+
+	&__item {
+		display: block;
+		margin: 0 0 40px;
+		position: relative;
+		padding-left: 70px;
+		counter-increment: item;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 52px;
+			height: 52px;
+			content: counter(item);
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 52px;
+			text-align: center;
+			box-shadow: 0 0 0 1px @colorBorder;
+			border-radius: 50%;
+		}
+	}
 }
 
 .loading {

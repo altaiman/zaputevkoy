@@ -48,7 +48,7 @@ gulp.task('scripts', () => {
 		.pipe(ENV.dev($.sourcemaps.init()))
 		.pipe($.babel({
 			presets: ['env'],
-			plugins: ['transform-object-rest-spread']
+			plugins: ['transform-object-rest-spread', 'transform-es2015-classes']
 		}))
 		// .pipe($.uglify())
 		.pipe(ENV.dev($.sourcemaps.write()))

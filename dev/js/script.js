@@ -97,6 +97,7 @@
     el.addEventListener('click', (e) => {
       e.preventDefault()
 
+
       const container = el.closest('[data-more-action]')
       container.classList.toggle('show-more')
 
@@ -162,6 +163,8 @@
           select.classList.remove('select_open')
         })
         select.classList.add('select_open')
+
+        new SimpleBar(select.querySelector('.select__dropdown'))
       }
     })
   })
@@ -579,10 +582,12 @@
     drop.addEventListener('click', (e) => {
       e.preventDefault()
 
+      if (!e.target.dataset.droping) return
+
       const data = drop.dataset.droping,
             dropped = document.querySelector(`[data-dropped="${data}"]`)
 
-      dropped.classList.add('drop_show')
+      dropped.classList.toggle('drop_show')
     })
   })
 
@@ -615,6 +620,36 @@
 
       modal.setContent(img);
       modal.open()
+
+    })
+  })
+
+  // Шаги
+
+
+  document.querySelectorAll('[data-step-button]').forEach((button, i) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const data = button.dataset.stepButton,
+            current = document.querySelector('.step-content_current'),
+            step = document.querySelectorAll('[data-step]')
+
+      current.classList.remove('step-content_current')
+      let index = Number(current.dataset.stepContent)
+
+      switch (data) {
+        case 'next':
+          document.querySelector(`[data-step-content="${++index}"]`).classList.add('step-content_current')
+          break
+        case 'prev':
+          document.querySelector(`[data-step-content="${--index}"]`).classList.add('step-content_current')
+          break
+      }
+
+      step.forEach((step, k) => {
+        step.dataset.step = index
+      })
 
     })
   })

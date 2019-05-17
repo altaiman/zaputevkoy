@@ -8,18 +8,72 @@ mixin sidebarFilter
     +e.content
       +e.block
         +e.SPAN.caption Курорты:
-        +b.select._field.select_fsize-s
-          select
-            option(value="0") Все
-            option(value="1") Популярные
-            option(value="2") Дешевые
-            option(value="3") Дорогие
+        +b.select._field.select_fsize-s(data-drop)
+          +b.BUTTON.js-Dropdown-title Все
+          +e.dropdown
+            +e.SPAN.caption Популярные:
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: 'Аланья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Анталья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Белек',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Бодрум',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Даламан',
+                  state: false
+                })
+            +e.SPAN.caption Все курорты:
+            +b.LABEL.field
+              +e.DIV.input
+                +e.INPUT(type='text' placeholder='Поиск по курорту')
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: 'Аланья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Анталья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Белек',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Бодрум',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Даламан',
+                  state: false
+                })
         
       +e.block
         +e.SPAN.caption Питание:
-        +e.UL.options
+        +b.UL.options
           each item in sidebarOptions[0].elements
-            +e.LI
+            +e.LI.item
               +checkbox({
                 name: item,
                 state: false
@@ -27,13 +81,13 @@ mixin sidebarFilter
               
       +e.block
         +e.SPAN.caption Класс отеля:
-        +e.UL.options
-          +e.LI
+        +b.UL.options
+          +e.LI.item
             +checkbox({
               name: 'Любая',
               state: false
             })
-          +e.LI
+          +e.LI.item
             +b.LABEL.checkbox._rating
               input(type="checkbox")
               +e.DIV.box
@@ -42,7 +96,7 @@ mixin sidebarFilter
                   +svg({
                     name: 'ico-star2'
                   })  
-          +e.LI
+          +e.LI.item
             +b.LABEL.checkbox._rating
               input(type="checkbox")
               +e.DIV.box
@@ -55,24 +109,7 @@ mixin sidebarFilter
                   +svg({
                     name: 'ico-star2'
                   })
-          +e.LI
-            +b.LABEL.checkbox._rating
-              input(type="checkbox")
-              +e.DIV.box
-              +e.DIV.content
-                +b.I.ico._star
-                  +svg({
-                    name: 'ico-star2'
-                  })
-                +b.I.ico._star
-                  +svg({
-                    name: 'ico-star2'
-                  })
-                +b.I.ico._star
-                  +svg({
-                    name: 'ico-star2'
-                  })
-          +e.LI
+          +e.LI.item
             +b.LABEL.checkbox._rating
               input(type="checkbox")
               +e.DIV.box
@@ -89,11 +126,7 @@ mixin sidebarFilter
                   +svg({
                     name: 'ico-star2'
                   })
-                +b.I.ico._star
-                  +svg({
-                    name: 'ico-star2'
-                  })
-          +e.LI
+          +e.LI.item
             +b.LABEL.checkbox._rating
               input(type="checkbox")
               +e.DIV.box
@@ -114,16 +147,37 @@ mixin sidebarFilter
                   +svg({
                     name: 'ico-star2'
                   })
+          +e.LI.item
+            +b.LABEL.checkbox._rating
+              input(type="checkbox")
+              +e.DIV.box
+              +e.DIV.content
                 +b.I.ico._star
                   +svg({
                     name: 'ico-star2'
                   })
-          +e.LI
+                +b.I.ico._star
+                  +svg({
+                    name: 'ico-star2'
+                  })
+                +b.I.ico._star
+                  +svg({
+                    name: 'ico-star2'
+                  })
+                +b.I.ico._star
+                  +svg({
+                    name: 'ico-star2'
+                  })
+                +b.I.ico._star
+                  +svg({
+                    name: 'ico-star2'
+                  })
+          +e.LI.item
             +checkbox({
               name: 'Аппартаменты',
               state: false
             })
-          +e.LI
+          +e.LI.item
             +checkbox({
               name: 'Виллы',
               state: false
@@ -131,21 +185,100 @@ mixin sidebarFilter
             
       +e.block
         +e.SPAN.caption Отель:
-        +b.select._field.select_fsize-s
-          select
-            option(value="0") Grand Hilton Hotel
-            option(value="1") Grand Hilton Hotel 2
-            option(value="2") Grand Hilton Hotel 3
+        +b.select._field.select_fsize-s(data-drop)
+          +b.BUTTON.js-Dropdown-title Все
+          +e.dropdown
+            +e.SPAN.caption Популярные:
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: '10 Karakoy, A Morgans Original',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '116 Residence Hotel',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '1207 Boutique Hotel',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '2000 Anittepe',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '3T Residence',
+                  state: false
+                })
+            +e.SPAN.caption Все курорты:
+            +b.LABEL.field
+              +e.DIV.input
+                +e.INPUT(type='text' placeholder='Поиск по отелю')
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: '10 Karakoy, A Morgans Original',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '116 Residence Hotel',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '1207 Boutique Hotel',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '2000 Anittepe',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: '3T Residence',
+                  state: false
+                })
             
       +e.block
         +e.SPAN.caption Туроператор:
-        +b.select._field.select_fsize-s
-          select
-            option(value="0") Все
-            option(value="1") Anex Tour
-            option(value="2") Global
-        +e.UL.options
-          +e.LI.options-strong
+        +b.select._field.select_fsize-s(data-drop)
+          +b.BUTTON.js-Dropdown-title Все
+          +e.dropdown
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: 'Туроператор',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Туроператор',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Туроператор',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Туроператор',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Туроператор',
+                  state: false
+                })
+        +b.UL.options
+          +e.LI.item_strong
             +checkbox({
               name: 'Перелет включен',
               state: false

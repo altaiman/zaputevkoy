@@ -103,7 +103,7 @@ mixin formReview
         name: 'Отзыв:',
         placeholder: 'Не более 1000 символов',
         required: true,
-        style: '_size-l'
+        style: '_size-l _size-full'
       })
     
     +e.submit
@@ -218,6 +218,208 @@ mixin formOnline
       })
       
     +e.submit
-      +b.BUTTON.button._highlight._size-wide
+      +b.BUTTON.button._highlight._size-wide(data-step-button="next")
+        span Следующий шаг
+        
+mixin formOnlineStep2
+  +b.FORM.form._online
+    +e.line-caption 
+      span 1 взрослый
+    +e.line
+      +field({
+        name: 'Фамилия - Латиницей',
+        type: 'text'
+      })
+    +e.line
+      +field({
+        name: 'Имя - Латиницей',
+        type: 'text'
+      })
+    +e.line._triple
+      +b.LABEL.field
+        +e.SPAN.caption Дата рождения
+        +b.select._field
+          select
+            option(disabled selected) День
+            option 1
+            option 3
+            option 5
+            option 6
+            option 7
+            option 30
+
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Месяц
+            option Январь
+            option Март
+            option Апрель
+            option Май
+            option Август
+            option Сентябрь
+            
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Год
+            option 1990
+            option 1991
+            option 1993
+            option 1995
+            option 1999
+            option 2000
+            
+    +e.line
+      +b.field
+        +e.SPAN.caption Пол
+        +e.DIV.input._checkboxes
+          +radio({
+            name: 'Мужской',
+            radio: 'sex',
+            state: true
+          })
+          +radio({
+            name: 'Женский',
+            radio: 'sex',
+            state: false
+          })
+          
+    +e.line._double
+      +b.LABEL.field
+        +e.SPAN.caption Гражданство
+        +b.select._field._full
+          select
+            option Российская Федерация
+            option Украина
+            option США
+            
+      +b.LABEL.field
+        +e.SPAN.caption Номер паспорта
+        +e.inputs
+          +e.DIV.input._size-s
+            +e.INPUT(type="text")
+          +e.DIV.input._size-m
+            +e.INPUT(type="text")
+          
+    +e.line
+      +field({
+        name: 'Кем выдан',
+        type: 'text'
+      })
+      
+    +e.line
+      +field({
+        name: 'Адрес по прописке',
+        type: 'text'
+      })
+      
+    +e.line
+      +field({
+        name: 'Номер моб. телефона',
+        type: 'tel'
+      })
+      
+    +e.line-caption 
+      span 2 взрослый
+    +e.line
+      +field({
+        name: 'Фамилия - Латиницей',
+        type: 'text'
+      })
+    +e.line
+      +field({
+        name: 'Имя - Латиницей',
+        type: 'text'
+      })
+    +e.line._triple
+      +b.LABEL.field
+        +e.SPAN.caption Дата рождения
+        +b.select._field
+          select
+            option(disabled selected) День
+            option 1
+            option 3
+            option 5
+            option 6
+            option 7
+            option 30
+
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Месяц
+            option Январь
+            option Март
+            option Апрель
+            option Май
+            option Август
+            option Сентябрь
+            
+      +b.LABEL.field
+        +b.select._field
+          select
+            option(disabled selected) Год
+            option 1990
+            option 1991
+            option 1993
+            option 1995
+            option 1999
+            option 2000
+            
+    +e.line
+      +b.field
+        +e.SPAN.caption Пол
+        +e.DIV.input._checkboxes
+          +radio({
+            name: 'Мужской',
+            radio: 'sex',
+            state: true
+          })
+          +radio({
+            name: 'Женский',
+            radio: 'sex',
+            state: false
+          })
+          
+    +e.line._double
+      +b.LABEL.field
+        +e.SPAN.caption Гражданство
+        +b.select._field._full
+          select
+            option Российская Федерация
+            option Украина
+            option США
+            
+      +b.LABEL.field
+        +e.SPAN.caption Номер паспорта
+        +e.inputs
+          +e.DIV.input._size-s
+            +e.INPUT(type="text")
+          +e.DIV.input._size-m
+            +e.INPUT(type="text")
+          
+    +e.line
+      +field({
+        name: 'Кем выдан',
+        type: 'text'
+      })
+      
+    +e.line
+      +field({
+        name: 'Адрес по прописке',
+        type: 'text'
+      })
+      
+    +e.line
+      +field({
+        name: 'Номер моб. телефона',
+        type: 'tel'
+      })
+      
+    +e.submit._flex
+      +b.BUTTON.button._highlight._size-wide(data-step-button="prev")
+        span Предыдущий шаг
+      +b.BUTTON.button._highlight._size-wide(data-step-button="next")
         span Следующий шаг
     

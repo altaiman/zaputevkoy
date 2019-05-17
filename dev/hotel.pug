@@ -45,7 +45,7 @@ html(lang=global.lang)
 							+e.LI.item._selected
 								a(href="#description") Описание
 							+e.LI.item
-								a(href="#map") Расположение на карте
+								a(href="#mapSection") Расположение на карте
 							+e.LI.item
 								a(href="#information") Информация
 							+e.LI.item
@@ -55,10 +55,10 @@ html(lang=global.lang)
 								
 					+cardHotel
 					
-					+b.H3.caption._padding Расположение на карте
+					+b.H3.caption._padding(id="mapSection") Расположение на карте
 					+map
 					
-					+b.block._section._hotel
+					+b.block._section._hotel(id="information")
 						+e.header
 							+b.H3.caption._block Информация об отеле
 							+b.UL.info._hotel
@@ -98,7 +98,7 @@ html(lang=global.lang)
 						
 						+e.content
 							+feauturesHotel
-							+b.content._description
+							+b.content._description(id="description")
 								p. 
 									Современный отель "Galaxy 3 Hotel" расположен на одной из лучших пляжных зон Вьетнама, 
 									в городе Нячанг. Расположение отеля очень удобно относительно аэропорта (26 км). 
@@ -125,7 +125,7 @@ html(lang=global.lang)
 					
 					+search
 					
-					+b.H3.caption._padding Все варианты туров в отель Galaxy 3 Hotel 3*
+					+b.H3.caption._padding(id="tours") Все варианты туров в отель Galaxy 3 Hotel 3*
 					
 					+b.block._content
 						+b.UL.items
@@ -139,7 +139,7 @@ html(lang=global.lang)
 						+b.A.button._highlight._size-wide-l
 							span Показать все 18
 							
-					+b.block._reviews
+					+b.block._reviews(id="reviews")
 						+b.H3.caption Отзывы
 						+reviews
 									
@@ -149,6 +149,6 @@ html(lang=global.lang)
 			+modalOrder
 			+modalGallery
 			
-		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDEAqGnjqzZ1UyTc8nVEsEmf5kY4xhqo" async defer)
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfDEAqGnjqzZ1UyTc8nVEsEmf5kY4xhqo")
 		+scripts
 		script(src="js/maps.js")

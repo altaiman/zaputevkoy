@@ -108,29 +108,29 @@
     font-weight: 600;
   }
 
-  &__options {
-    margin: 0 0 23px;
-    padding: 0 10px;
-    list-style: none;
-
-    li {
-      display: block;
-      margin: 0 0 10px;
-    }
-  }
-
-  &__options-strong {
-    .checkbox {
-      font-size: @fontSizeDefault;
-      font-weight: 600;
-    }
-  }
-
   .field {
     &__input {
       input {
         padding-left: 18px;
       }
+    }
+  }
+}
+
+.options {
+  margin: 0 0 23px;
+  padding: 0 10px;
+  list-style: none;
+
+  &__item {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  &__item_strong {
+    .checkbox {
+      font-size: @fontSizeDefault;
+      font-weight: 600;
     }
   }
 }

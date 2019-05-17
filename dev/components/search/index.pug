@@ -17,14 +17,67 @@ mixin search
             })
     +e.FORM.form
       +e.options
-        +e.select.select__
-          select
-            optgroup(label="Популярные")
-              option(value="1") Турция
-              option(value="2") Греция
-              option(value="3") Кипр
-              option(value="4") Россия
-              option(value="5" selected) Тайланд
+        +e.select.select__(data-drop)
+          +b.BUTTON.js-Dropdown-title Все
+          +e.dropdown
+            +e.SPAN.caption Популярные:
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: 'Аланья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Анталья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Белек',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Бодрум',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Даламан',
+                  state: false
+                })
+            +e.SPAN.caption Все курорты:
+            +b.LABEL.field
+              +e.DIV.input
+                +e.INPUT(type='text' placeholder='Поиск по курорту')
+            +b.UL.options
+              +e.LI.item
+                +checkbox({
+                  name: 'Аланья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Анталья',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Белек',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Бодрум',
+                  state: false
+                })
+              +e.LI.item
+                +checkbox({
+                  name: 'Даламан',
+                  state: false
+                })
+            
               
         +e.select.select__._size-s(data-drop)
           +b.BUTTON.js-Dropdown-title 10.02 - 25.02

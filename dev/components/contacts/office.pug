@@ -34,6 +34,16 @@ mixin office(hidden)
             Пн - Пт: 10:00 - 21:00<br>
             Сб: 11:00 - 19:00<br>
             Вс: 11:00 - 18:00
+            
+        +e.block
+          +e.caption
+            +b.I.ico
+              +svg({
+                name: 'ico-tel'
+              })
+            span Телефон
+          p
+            span <strong>+7 (812) 386-06-86</strong> (доб. 317)
       +e.more
         - if (hidden)
           +b.BUTTON.button._highlight._size-wide(data-toggle="Свернуть" data-more)

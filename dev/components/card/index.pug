@@ -64,10 +64,13 @@ mixin cardSearch(data)
             +b.BUTTON.button._highlight(data-more data-toggle="Свернуть")
               span Подробнее
               
-    +e.UL.details(data-more)
-      +details
-      +details
-      +details
+    +e.UL.details
+      +e.LI.details-item
+        +details
+      +e.LI.details-item
+        +details
+      +e.LI.details-item
+        +details
       +e.A.all.button(href="#all-tours") Все туры в этот отель
       
 mixin cardHotel
@@ -157,5 +160,5 @@ mixin cardHotel
         +e.block
           +ticket
         
-        +b.A.button._highlight._full._size-l(href="#") Еще 18 вариантов
+        +b.A.button._highlight._full._size-l(href="#tours") Еще 18 вариантов
   

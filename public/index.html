@@ -182,16 +182,129 @@
             </div>
             <form class="search__form">
               <div class="search__options">
-                <div class="search__select select">
-                  <select>
-                    <optgroup label="Популярные">
-                      <option value="1">Турция</option>
-                      <option value="2">Греция</option>
-                      <option value="3">Кипр</option>
-                      <option value="4">Россия</option>
-                      <option value="5" selected="selected">Тайланд</option>
-                    </optgroup>
-                  </select>
+                <div class="search__select select" data-drop="data-drop">
+                  <button class="js-Dropdown-title">Все
+                  </button>
+                  <div class="select__dropdown"><span class="select__caption">Популярные:</span>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul><span class="select__caption">Все курорты:</span>
+                    <label class="field">
+                      <div class="field__input"><input type="text" placeholder="Поиск по курорту"/>
+                      </div>
+                    </label>
+                    <ul class="options">
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Аланья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Анталья
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Белек
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Бодрум
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                      <li class="options__item">
+                        <label class="checkbox">
+                          <input type="checkbox"/>
+                          <div class="checkbox__box">
+                          </div>
+                          <div class="checkbox__content">
+                            <p>Даламан
+                            </p>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="search__select select select_size-s" data-drop="data-drop">
                   <button class="js-Dropdown-title">10.02 - 25.02
@@ -759,13 +872,74 @@
           </h2>
           <div class="profit">
             <ul class="profit__list">
-              <li class="profit__item"><a class="profit__block profit__block_type-1" href="#profit"><span class="profit__block-title caption caption_size-l">Оплата в рассрочку</span><img src="img/profit/block-1.jpg"/></a>
+              <li class="profit__item">
+                <div class="profit__block profit__block_type-1">
+                  <div class="profit__block-inner">
+                    <div class="profit__block-front"><span class="profit__block-title caption caption_size-l">Оплата в рассрочку</span><img src="img/profit/block-1.jpg"/>
+                    </div>
+                    <div class="profit__block-back">
+                      <p>
+                        Я текстовое подробное текстовое описание интересующей тебя акции!
+                        Здесь подробно и лаконично описана сама суть акции, её длительность 
+                        и условия проведения. Тебя должна заинтересовать данная информация.<br>
+                        <strong>Не стесняйся, посмотри также другие акции!</strong>
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="profit__item"><a class="profit__block profit__block_type-2" href="#profit"><span class="profit__block-title caption caption_size-l">Больше за меньшие деньги</span><img src="img/profit/block-2.jpg"/></a>
+              <li class="profit__item">
+                <div class="profit__block profit__block_type-2">
+                  <div class="profit__block-inner">
+                    <div class="profit__block-front"><span class="profit__block-title caption caption_size-l">Больше за меньшие деньги</span><img src="img/profit/block-2.jpg"/>
+                    </div>
+                    <div class="profit__block-back">
+                      <p>
+                        Я текстовое подробное текстовое описание интересующей тебя акции!
+                        Здесь подробно и лаконично описана сама суть акции, её длительность 
+                        и условия проведения. Тебя должна заинтересовать данная информация.<br>
+                        <strong>Не стесняйся, посмотри также другие акции!</strong>
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="profit__item"><a class="profit__block profit__block_type-1" href="#profit"><span class="profit__block-title caption caption_size-l">Оплата в рассрочку</span><img src="img/profit/block-1.jpg"/></a>
+              <li class="profit__item">
+                <div class="profit__block profit__block_type-1">
+                  <div class="profit__block-inner">
+                    <div class="profit__block-front"><span class="profit__block-title caption caption_size-l">Оплата в рассрочку</span><img src="img/profit/block-1.jpg"/>
+                    </div>
+                    <div class="profit__block-back">
+                      <p>
+                        Я текстовое подробное текстовое описание интересующей тебя акции!
+                        Здесь подробно и лаконично описана сама суть акции, её длительность 
+                        и условия проведения. Тебя должна заинтересовать данная информация.<br>
+                        <strong>Не стесняйся, посмотри также другие акции!</strong>
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="profit__item"><a class="profit__block profit__block_type-2" href="#profit"><span class="profit__block-title caption caption_size-l">Больше за меньшие деньги</span><img src="img/profit/block-2.jpg"/></a>
+              <li class="profit__item">
+                <div class="profit__block profit__block_type-2">
+                  <div class="profit__block-inner">
+                    <div class="profit__block-front"><span class="profit__block-title caption caption_size-l">Больше за меньшие деньги</span><img src="img/profit/block-2.jpg"/>
+                    </div>
+                    <div class="profit__block-back">
+                      <p>
+                        Я текстовое подробное текстовое описание интересующей тебя акции!
+                        Здесь подробно и лаконично описана сама суть акции, её длительность 
+                        и условия проведения. Тебя должна заинтересовать данная информация.<br>
+                        <strong>Не стесняйся, посмотри также другие акции!</strong>
+                        
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
