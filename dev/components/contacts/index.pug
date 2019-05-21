@@ -14,14 +14,14 @@ mixin address
               name: 'ico-search'
             })
     +e.actions
-      +b.A.button._highlight._ico(href="#contacts-list")
+      +b.BUTTON.button._ico(data-tab="0")
         +b.I.ico
           +svg({
             name: 'ico-list'
           })
         span Список
           
-      +b.BUTTON.button._ico(data-more data-toggle="Скрыть")
+      +b.BUTTON.button._ico(data-tab="1")
         +b.I.ico
           +svg({
             name: 'ico-place'

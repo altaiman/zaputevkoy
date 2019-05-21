@@ -129,19 +129,20 @@
       tab.addEventListener('click', (e) => {
         e.preventDefault()
 
+        if (tab.parentNode.dataset.tabsContent) return
+
         const index = tab.dataset.tab,
               showing = content.querySelector('.showing'),
               selected = tabs.querySelector('.selected')
 
         if (showing) showing.classList.remove('showing')
         if (selected) selected.classList.remove('selected')
-
         tab.classList.add('selected')
         content.querySelector(`[data-tab="${index}"]`).classList.add('showing')
       })
-    })
 
-    tabs.querySelector('[data-tab]').click()
+    })
+    tabs.querySelector(`[data-tab="0"]`).click()
   })
 
   // select

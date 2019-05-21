@@ -32,7 +32,7 @@ html(lang=global.lang)
 		+header({ search: true })
 		
 		+e.MAIN.content
-			+b.SECTION.section
+			+b.SECTION.section(data-tabs="contacts")
 				+e.container.container
 					+e.header._contacts
 						+breadcrumbs(['Контакты'])
@@ -40,21 +40,25 @@ html(lang=global.lang)
 					
 					+b.H3.caption._centered Офисы в Санкт - Петербурге
 					
-					+b.block._form._address(data-more-action)
+					+b.block._form._address
 						+address
-						+mapContacts
 						
 						+e.content._bg
 							p. 
 								Green Card является не единым соглашением, а совокупностью двусторонних 
 								договоров между странами-участницами, каждая из которых представлена 
 								своим Национальным Бюро. Основные положения страховых отношени
-								
-					+b.items(id="contacts-list")
-						+office(false)
-						+office(true)
-						+office(true)
-					
+
+					+e.DIV(data-tabs-content="contacts")
+						div(data-tab="0")
+							+b.items(id="contacts-list")
+								+office(false)
+								+office(true)
+								+office(true)
+						div(data-tab="1")
+							+mapContacts
+						
+						
 									
 		+footer
 		
