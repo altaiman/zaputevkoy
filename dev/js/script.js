@@ -499,7 +499,6 @@
       gallery.querySelector('[data-gallery-controls]').addEventListener('click', (e) => {
         const direction = Number(e.target.closest('[data-gallery-controls]').dataset.galleryControls)
         let index = gallery.querySelector('.gallery__item_selected').dataset.index
-        console.log(e.target)
 
         switch (direction) {
           case 0:
@@ -525,12 +524,6 @@
     gallery.querySelector('.gallery__item:first-child').click()
   })
 
-  document.querySelectorAll('[data-gallery-contols]').forEach((controls, i) => {
-    const gallery = controls.closest('.gallery'),
-          galleryList = gallery.querySelector('.gallery__list')
-    controls.querySelector('[data-gallery-controls-prev]')
-  })
-
   document.querySelectorAll('[data-modal-open]').forEach((trigger, i) => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault()
@@ -539,11 +532,11 @@
             data = t.dataset.modalOpen,
             modalElement = document.querySelector(`[data-modal="${data}"]`)
 
-      let modalContent = modalElement.innerHTML
-
       if (data == 'gallery') {
-        modalContent = t.innerHTML
+        modalElement.querySelector('.modal__content').innerHTML = t.innerHTML
       }
+
+      let modalContent = modalElement.innerHTML
 
       let modal = new tingle.modal({
         closeMethods: ['overlay', 'escape'],
@@ -559,6 +552,40 @@
 
       modal.setContent(modalContent)
       modal.open()
+
+      if (data == 'gallery') {
+        modal.modalBoxContent.querySelectorAll('[data-gallery-controls]').forEach((arrow, k) => {
+          arrow.addEventListener('click', (e) => {
+            const direction = Number(e.target.closest('[data-gallery-controls]').dataset.galleryControls),
+                  selected = document.querySelector('.gallery__item_selected')
+            let newSelected
+
+            switch (direction) {
+              case 0:
+                newSelected = selected.previousElementSibling
+
+                if (!newSelected) {
+                  newSelected = selected.parentNode.children[selected.parentNode.children.length-1]
+                }
+                break
+
+              case 1:
+                newSelected = selected.nextElementSibling
+
+                if (!newSelected) {
+                  newSelected = selected.parentNode.children[0]
+                }
+                break
+            }
+
+            const img = newSelected.dataset.img
+            modal.modalBoxContent.querySelector('img').src = img
+            selected.classList.remove('gallery__item_selected')
+            newSelected.classList.add('gallery__item_selected')
+
+          })
+        })
+      }
 
       const forms = modal.modalBoxContent.querySelectorAll('form')
 

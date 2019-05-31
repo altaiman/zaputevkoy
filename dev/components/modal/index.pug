@@ -41,4 +41,13 @@ mixin modalOrder
 
 mixin modalGallery
   +b.modal._gallery(data-modal="gallery")
+    +e.controls
+      +b.BUTTON.arrow._prev(data-gallery-controls="0")
+        +svg({
+          name: 'ico-arrow'
+        })
+      +b.BUTTON.arrow._next(data-gallery-controls="1")
+        +svg({
+          name: 'ico-arrow'
+        })
     +e.content
