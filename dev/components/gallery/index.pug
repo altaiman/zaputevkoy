@@ -15,13 +15,13 @@ mixin gallery
     +e.view(data-modal-open="gallery")
       img(src="#")
     +e.UL.list(data-slider-slides)
-      +e.LI.item(data-image=global.paths.pictures+'card.jpg')
+      +e.LI.item(data-img=global.paths.pictures+'card.jpg')
         img(src=global.paths.pictures+'card.jpg')
-      +e.LI.item(data-image=global.paths.pictures+'card2.jpg')
+      +e.LI.item(data-img=global.paths.pictures+'card2.jpg')
         img(src=global.paths.pictures+'card2.jpg')
-      +e.LI.item(data-image=global.paths.pictures+'card.jpg')
+      +e.LI.item(data-img=global.paths.pictures+'card.jpg')
         img(src=global.paths.pictures+'card.jpg')
-      +e.LI.item(data-image=global.paths.pictures+'card2.jpg')
+      +e.LI.item(data-img=global.paths.pictures+'card2.jpg')
         img(src=global.paths.pictures+'card2.jpg')
   
 
@@ -37,12 +37,12 @@ mixin galleryOffice
         +svg({
           name: 'ico-arrow'
         })
-    +e.view
+    +e.view(data-modal-open="gallery")
       img(src="#")
     +e.UL.list
-      +e.LI.item(data-image=global.paths.pictures+'card.jpg' data-index="0")
+      +e.LI.item(data-img=global.paths.pictures+'card.jpg' data-index="0")
         img(src=global.paths.pictures+'card.jpg')
-      +e.LI.item(data-image=global.paths.pictures+'card2.jpg' data-index="1")
+      +e.LI.item(data-img=global.paths.pictures+'card2.jpg' data-index="1")
         img(src=global.paths.pictures+'card2.jpg')
-      +e.LI.item(data-image=global.paths.pictures+'card.jpg' data-index="2")
+      +e.LI.item(data-img=global.paths.pictures+'card.jpg' data-index="2")
         img(src=global.paths.pictures+'card.jpg')

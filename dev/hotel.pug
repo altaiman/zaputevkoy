@@ -24,7 +24,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Москва - Вьетнам, Нячанг'
 	}
 
 doctype html
@@ -37,8 +37,8 @@ html(lang=global.lang)
 			+b.SECTION.section
 				+e.container.container
 					+e.header
-						+breadcrumbs(['Поиск туров', 'Москва - Вьетнам, Нячанг'])
-						+b.H2.caption Москва - Вьетнам, Нячанг
+						+breadcrumbs(['Поиск туров', pageSettings.title])
+						+b.H2.caption= pageSettings.title
 					
 					+b.block._links
 						+b.UL.links

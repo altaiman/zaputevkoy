@@ -471,7 +471,7 @@
     if (galleryItem) {
       const gallery = galleryItem.closest('.gallery'),
             view = gallery.querySelector('.gallery__view'),
-            image = galleryItem.dataset.image,
+            image = galleryItem.dataset.img,
             selected = gallery.querySelector('.gallery__item_selected'),
             count = gallery.querySelector('.gallery__count')
 
@@ -499,6 +499,7 @@
       gallery.querySelector('[data-gallery-controls]').addEventListener('click', (e) => {
         const direction = Number(e.target.closest('[data-gallery-controls]').dataset.galleryControls)
         let index = gallery.querySelector('.gallery__item_selected').dataset.index
+        console.log(e.target)
 
         switch (direction) {
           case 0:

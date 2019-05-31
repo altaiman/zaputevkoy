@@ -22,7 +22,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Контакты'
 	}
 
 doctype html
@@ -35,8 +35,8 @@ html(lang=global.lang)
 			+b.SECTION.section(data-tabs="contacts")
 				+e.container.container
 					+e.header._contacts
-						+breadcrumbs(['Контакты'])
-						+b.H2.caption Контакты
+						+breadcrumbs([pageSettings.title])
+						+b.H2.caption= pageSettings.title
 					
 					+b.H3.caption._centered Офисы в Санкт - Петербурге
 					
@@ -64,6 +64,7 @@ html(lang=global.lang)
 		
 		+e.modals
 			+modalOrder
+			+modalGallery
 			
 		+scripts
 		script(src="js/maps.js")

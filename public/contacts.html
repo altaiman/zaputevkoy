@@ -2,7 +2,7 @@
 <html lang="ru">
   <meta charset="UTF-8"/>
   <meta name="description" content=""/>
-  <title>ЗаПутёвкой | Главная</title>
+  <title>ЗаПутёвкой | Контакты</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <meta name="viewport" content="width=1240, initial-scale=1, maximum-scale=1"/>
@@ -609,14 +609,14 @@
                               </svg>
                             </button>
                           </div>
-                          <div class="gallery__view"><img src="#"/>
+                          <div class="gallery__view" data-modal-open="gallery"><img src="#"/>
                           </div>
                           <ul class="gallery__list">
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
                             </li>
                           </ul>
                         </div>
@@ -669,7 +669,7 @@
                         <div class="office__actions"><a class="link" href="#"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-map"></use>
-                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="#"> <i class="ico">
+                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="javascript:void 0;" onclick="print()"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-doc"></use>
                           </svg></i><span>Распечатать</span></a>
@@ -747,14 +747,14 @@
                               </svg>
                             </button>
                           </div>
-                          <div class="gallery__view"><img src="#"/>
+                          <div class="gallery__view" data-modal-open="gallery"><img src="#"/>
                           </div>
                           <ul class="gallery__list">
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
                             </li>
                           </ul>
                         </div>
@@ -807,7 +807,7 @@
                         <div class="office__actions"><a class="link" href="#"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-map"></use>
-                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="#"> <i class="ico">
+                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="javascript:void 0;" onclick="print()"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-doc"></use>
                           </svg></i><span>Распечатать</span></a>
@@ -885,14 +885,14 @@
                               </svg>
                             </button>
                           </div>
-                          <div class="gallery__view"><img src="#"/>
+                          <div class="gallery__view" data-modal-open="gallery"><img src="#"/>
                           </div>
                           <ul class="gallery__list">
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="0"><img src="pictures/card.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card2.jpg" data-index="1"><img src="pictures/card2.jpg"/>
                             </li>
-                            <li class="gallery__item" data-image="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
+                            <li class="gallery__item" data-img="pictures/card.jpg" data-index="2"><img src="pictures/card.jpg"/>
                             </li>
                           </ul>
                         </div>
@@ -945,7 +945,7 @@
                         <div class="office__actions"><a class="link" href="#"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-map"></use>
-                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="#"> <i class="ico">
+                          </svg></i><span>Посмотреть на карте</span></a><a class="link" href="javascript:void 0;" onclick="print()"> <i class="ico">
                           <svg>
                             <use xlink:href="img/symbols.svg#svg-ico-doc"></use>
                           </svg></i><span>Распечатать</span></a>
@@ -1061,6 +1061,10 @@
               </button>
             </div>
           </form>
+        </div>
+      </div>
+      <div class="modal modal_gallery" data-modal="gallery">
+        <div class="modal__content">
         </div>
       </div>
     </div>

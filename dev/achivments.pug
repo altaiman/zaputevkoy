@@ -24,7 +24,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Достижения'
 	}
 
 doctype html
@@ -37,8 +37,8 @@ html(lang=global.lang)
 			+b.SECTION.section
 				+e.container.container
 					+e.header
-						+breadcrumbs(['Достижения'])
-						+b.H2.caption Достижения
+						+breadcrumbs([pageSettings.title])
+						+b.H2.caption= pageSettings.title
 					
 					+b.H3.caption._padding Мы сотрудничаем с самыми крупными туроператорами
 					+sliderOperators
