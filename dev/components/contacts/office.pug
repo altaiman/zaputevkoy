@@ -4,7 +4,7 @@ include data.pug
 include ../gallery/index.pug
 
 mixin office(hidden)
-  +b.office(data-more-action class=(hidden == true) ? '' : 'show-more')
+  +b.office(data-print-content data-more-action class=(hidden == true) ? '' : 'show-more')
     +e.header
       +e.label
         h4 Офис “Купчино”
@@ -102,13 +102,13 @@ mixin office(hidden)
           p Специалист по страхованию финским визам и загранпаспортам:
           +e.A.tel(href="tel:78123860686") +7 (812) 386-06-86 <strong>(доб. 317)</strong>
           +e.actions
-            +b.A.link(href="#") 
+            +b.BUTTON.link(data-map) 
               +b.I.ico
                 +svg({
                   name: 'ico-map'
                 })
               span Посмотреть на карте
-            +b.A.link(href="#") 
+            +b.BUTTON.link(data-print) 
               +b.I.ico
                 +svg({
                   name: 'ico-doc'

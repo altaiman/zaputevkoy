@@ -24,7 +24,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Реквизиты и Способы оплаты'
 	}
 
 doctype html
@@ -37,8 +37,8 @@ html(lang=global.lang)
 			+b.SECTION.section
 				+e.container.container
 					+e.header
-						+breadcrumbs(['Реквизиты и Способы оплаты'])
-						+b.H2.caption Реквизиты и Способы оплаты
+						+breadcrumbs([pageSettings.title])
+						+b.H2.caption= pageSettings.title 
 					
 					+b.content._page
 						p

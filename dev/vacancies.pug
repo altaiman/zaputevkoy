@@ -24,7 +24,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Вакансии'
 	}
 
 doctype html
@@ -37,8 +37,8 @@ html(lang=global.lang)
 			+b.SECTION.section
 				+e.container.container
 					+e.header
-						+breadcrumbs(['Вакансии'])
-						+b.H2.caption Вакансии
+						+breadcrumbs([pageSettings.title])
+						+b.H2.caption= pageSettings.title
 					
 					+b.content._page
 						p Крупная федеральная сеть туристических агентств «ЗаПутёвкой.рф» приглашает на работу активного и успешного Менеджера по туризму!

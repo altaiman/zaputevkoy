@@ -20,7 +20,7 @@ include components/footer/scripts.pug
 //- variables page 
 - 
 	pageSettings = {
-		title: 'Главная'
+		title: 'Туры в Турцию'
 	}
 
 doctype html
@@ -34,7 +34,7 @@ html(lang=global.lang)
 				+e.container.container
 					+e.header
 						+breadcrumbs(['Турция'])
-						+b.H2.caption._size-l Туры в Турцию
+						+b.H2.caption._size-l= pageSettings.title
 					
 				+e.container.container._flex
 					+e.block._main

@@ -664,6 +664,29 @@
     })
   })
 
+  // Печать
+  document.querySelectorAll('[data-print]').forEach((print, i) => {
+    print.addEventListener('click', (e) => {
+      const printHTML = e.target.closest('[data-print-content]').innerHTML,
+            printContainer = document.querySelector('.printSelection')
+
+      printContainer.innerHTML = printHTML
+      document.querySelector('body').classList.add('printSelected')
+
+      window.print();
+
+      setTimeout(() => {
+        document.querySelector('body').classList.remove('printSelected')
+      }, 0)
+    })
+  })
+
+  document.querySelectorAll('[data-map]').forEach((btn, i) => {
+    btn.addEventListener('click', (e) => {
+      document.querySelector('button[data-tab="1"]').click()
+    })
+  })
+
   //Имитация загрузки
   const loading = document.querySelector('.loading');
 
