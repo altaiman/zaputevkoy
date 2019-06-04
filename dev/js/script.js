@@ -147,6 +147,10 @@
 
   // select
   document.querySelectorAll('select').forEach((select, i) => {
+    if (select.closest('.modal')) {
+      return
+    }
+
     new CustomSelect({
       elem: select
     });
@@ -591,9 +595,16 @@
 
       forms.forEach((form, i) => {
         form.querySelectorAll('select').forEach((select, i) => {
+          console.log(i)
+
           new CustomSelect({
             elem: select
           })
+
+          form.querySelector('.select button').addEventListener('click', (e) => {
+            e.preventDefault()
+          })
+
         })
       })
 

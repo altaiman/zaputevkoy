@@ -571,7 +571,7 @@
                 </div>
               </label>
             </form>
-            <button class="button"><span>Жалоба директору</span>
+            <button class="button" data-modal-open="claim"><span>Жалоба директору</span>
             </button>
           </div>
         </div>
@@ -631,6 +631,48 @@
                 Отправка заявки ни к чему не обязывает и не является ронированием. 
                 Получив заявку, менеджер свяжется с Вами для уточнения деталей
               </p>
+            </div>
+            <div class="form__submit">
+              <button class="button button_highlight button_full"><span>Отправить заявку</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal modal_size-s" data-modal="claim">
+        <header class="modal__head"><span class="caption caption_size-l">Написать директору</span>
+        </header>
+        <div class="modal__content">
+          <form class="form form_modal">
+            <div class="form__line">
+              <label class="field field_size-full"><span class="field__caption">Ваше имя</span>
+                <div class="field__input"><input type="text" placeholder="Иванов Иван Иванович"/>
+                </div>
+              </label>
+            </div>
+            <div class="form__line">
+              <label class="field field_size-full"><span class="field__caption">Ваш телефон</span>
+                <div class="field__input"><input type="tel" placeholder="+7 ( ___ ) - ___ - __ - __" data-mask="+7 (###) ###-####"/>
+                </div>
+              </label>
+            </div>
+            <div class="form__line">
+              <div class="field field_size-full"><span class="field__caption">Тема обращения</span>
+                <div class="select select_field select_full select_fsize-s">
+                  <select>
+                    <option value="0">Жалоба</option>
+                    <option value="0">Жалоба</option>
+                    <option value="0">Жалоба</option>
+                    <option value="0">Жалоба</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__line">
+              <label class="field field_size-full"><span class="field__caption">Тема обращения</span>
+                <div class="field__input field__input_text"><textarea placeholder="Комментарий"></textarea>
+                </div>
+              </label>
             </div>
             <div class="form__submit">
               <button class="button button_highlight button_full"><span>Отправить заявку</span>
