@@ -490,8 +490,6 @@
 
   })
 
-  // gallery count
-
   // gallery trigger
   document.querySelectorAll('.gallery').forEach((gallery, i) => {
     const count = gallery.querySelector('.gallery__count'),
@@ -558,10 +556,12 @@
       modal.open()
 
       if (data == 'gallery') {
+        const g = e.target.closest('.gallery')
+
         modal.modalBoxContent.querySelectorAll('[data-gallery-controls]').forEach((arrow, k) => {
           arrow.addEventListener('click', (e) => {
             const direction = Number(e.target.closest('[data-gallery-controls]').dataset.galleryControls),
-                  selected = document.querySelector('.gallery__item_selected')
+                  selected = g.querySelector('.gallery__item_selected')
             let newSelected
 
             switch (direction) {
@@ -715,6 +715,7 @@
 
       setTimeout(() => {
         document.querySelector('body').classList.remove('printSelected')
+        printContainer.innerHTML = ''
       }, 0)
     })
   })
