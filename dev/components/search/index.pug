@@ -4,18 +4,25 @@ include data.pug
 include ../form/checkbox.pug
 
 mixin search
-  +b.search
+  +b.FORM.search
     +e.header
       +e.block
-        +e.SPAN.location Откуда: <a href="#city" class="link">Санкт-Петербург</a>
+        +e.SPAN.location Откуда: 
+          +b.DIV.select._link
+            select
+              option(value="0") Воронеж
+              option(value="1") Барнаул
+              option(value="2") Кемерово
+              option(value="3") Новосибирск
+              option(value="4") Москва
       +e.block
-        +b.A.link(href="#") 
+        +b.SPAN.link
           span Расширенный поиск
           +b.I.ico
             +svg({
               name: 'ico-filter'
             })
-    +e.FORM.form
+    +e.form
       +e.options
         +e.select.select__(data-drop)
           +b.BUTTON.js-Dropdown-title Все

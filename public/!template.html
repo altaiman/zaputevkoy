@@ -172,17 +172,26 @@
             <button class="countries__more button button_size-s" data-toggle="Свернуть" data-more="data-more"><span>Еще страны</span>
             </button>
           </div>
-          <div class="search">
+          <form class="search">
             <div class="search__header">
-              <div class="search__block"><span class="search__location">Откуда: <a href="#city" class="link">Санкт-Петербург</a></span>
+              <div class="search__block"><span class="search__location">Откуда: 
+                <div class="select select_link">
+                  <select>
+                    <option value="0">Воронеж</option>
+                    <option value="1">Барнаул</option>
+                    <option value="2">Кемерово</option>
+                    <option value="2">Новосибирск</option>
+                    <option value="2">Москва</option>
+                  </select>
+                </div></span>
               </div>
-              <div class="search__block"><a class="link" href="#"> <span>Расширенный поиск</span><i class="ico">
+              <div class="search__block"><span class="link"><span>Расширенный поиск</span><i class="ico">
                 <svg>
                   <use xlink:href="img/symbols.svg#svg-ico-filter"></use>
-                </svg></i></a>
+                </svg></i></span>
               </div>
             </div>
-            <form class="search__form">
+            <div class="search__form">
               <div class="search__options">
                 <div class="search__select select" data-drop="data-drop">
                   <button class="js-Dropdown-title">Все
@@ -480,8 +489,8 @@
                 <button class="button button_highlight button_size-l button_full" type="submit"><span>Поиск</span>
                 </button>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </header>

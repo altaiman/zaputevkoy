@@ -145,6 +145,33 @@
   }
 }
 
+.select_link {
+  height: auto;
+  width: auto;
+  margin: 0 4px;
+
+  &::after {
+    display: none;
+  }
+
+  .js-Dropdown-title {
+    padding: 0;
+    background: none;
+    color: @colorLink;
+    border: none;
+    transition: all .16s;
+
+    &:focus,
+    &:hover {
+      color: @colorHighlight;
+    }
+  }
+
+  .js-Dropdown-list {
+    width: auto;
+  }
+}
+
 .select_open {
   .select {
     &__dropdown {
