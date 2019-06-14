@@ -3,8 +3,8 @@ include data.pug
 
 include ../gallery/index.pug
 
-mixin office(hidden)
-  +b.office(data-print-content data-more-action class=(hidden == true) ? '' : 'show-more')
+mixin office(data)
+  +b.office(data-print-content data-more-action class=(data.hidden == true) ? '' : 'show-more')
     +e.header
       +e.label
         h4 Офис “Купчино”
@@ -20,9 +20,7 @@ mixin office(hidden)
                 name: 'ico-place'
               })
             span Адрес:
-          p. 
-            Санкт-Петербург,<br>
-            ул. Типанова, д. 3
+          +e.P.address(data-address)= data.address
         +e.block
           +e.caption
             +b.I.ico
@@ -45,7 +43,7 @@ mixin office(hidden)
           p
             span <strong>+7 (812) 386-06-86</strong> (доб. 317)
       +e.more
-        - if (hidden)
+        - if (data.hidden)
           +b.BUTTON.button._highlight._size-wide(data-toggle="Свернуть" data-more)
             span Подробнее
         - else
@@ -67,7 +65,7 @@ mixin office(hidden)
                     name: 'ico-place'
                   })
                 span Адрес:
-              p Санкт-Петербург, ул. Типанова, д. 3
+              p= data.address
               
             +e.LI.line
               +e.caption
@@ -102,7 +100,7 @@ mixin office(hidden)
           p Специалист по страхованию финским визам и загранпаспортам:
           +e.A.tel(href="tel:78123860686") +7 (812) 386-06-86 <strong>(доб. 317)</strong>
           +e.actions
-            +b.BUTTON.link(data-map) 
+            +b.BUTTON.link(data-modal-open="map" data-coords="51.66,39.20") 
               +b.I.ico
                 +svg({
                   name: 'ico-map'

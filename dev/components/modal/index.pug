@@ -5,6 +5,7 @@ include ../form/index.pug
 
 mixin modalOrder
   +b.modal._size-s(data-modal="order")
+    +e.BUTTON.close
     +e.HEADER.head
       +b.SPAN.caption._size-l Оставить заявку
     +e.content
@@ -54,6 +55,7 @@ mixin modalGallery
     
 mixin modalClaim
   +b.modal._size-s(data-modal="claim")
+    +e.BUTTON.close
     +e.HEADER.head
       +b.SPAN.caption._size-l Написать директору
     +e.content
@@ -92,3 +94,10 @@ mixin modalClaim
           +b.BUTTON.button._highlight._full
             span Отправить заявку
           
+mixin modalMap(data)
+  +b.modal(data-modal="map")
+    +e.BUTTON.close
+    +e.HEADER.head
+      +b.SPAN.caption._size-l Воронеж
+    +e.content._map
+      

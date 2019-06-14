@@ -52,9 +52,18 @@ html(lang=global.lang)
 					+e.DIV(data-tabs-content="contacts")
 						div(data-tab="0")
 							+b.items(id="contacts-list")
-								+office(false)
-								+office(true)
-								+office(true)
+								+office({
+									hidden: false,
+									address: 'Санкт-Петербург, ул. Типанова, д. 3'
+								})
+								+office({
+									hidden: true,
+									address: 'Барнаул, ул. Пролетарская, д. 150'
+								})
+								+office({
+									hidden: true,
+									address: 'Москва, ул. Кудрявцева, д. 33'
+								})
 						div(data-tab="1")
 							+mapContacts
 						
@@ -66,6 +75,7 @@ html(lang=global.lang)
 			+modalOrder
 			+modalClaim
 			+modalGallery
+			+modalMap
 			
 		+b.printSelection
 			

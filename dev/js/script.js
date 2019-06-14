@@ -532,7 +532,8 @@
 
       const t = e.target.closest('[data-modal-open]'),
             data = t.dataset.modalOpen,
-            modalElement = document.querySelector(`[data-modal="${data}"]`)
+            modalElement = document.querySelector(`[data-modal="${data}"]`),
+            scroll = $(window).scrollTop()
 
       if (data == 'gallery') {
         modalElement.querySelector('.modal__content').innerHTML = t.innerHTML
@@ -543,6 +544,8 @@
       let modal = new tingle.modal({
         closeMethods: ['overlay', 'escape'],
         onClose: function() {
+          $(window).scrollTop(scroll)
+
           try {
             this.remove()
           } catch (e) {
@@ -554,6 +557,16 @@
 
       modal.setContent(modalContent)
       modal.open()
+
+      if (data == 'map') {
+        const coords = t.dataset.coords
+
+        new ymaps.Map($('.modal__content_map').get(0), {
+            center: coords.split(','),
+            zoom: 16,
+            controls: []
+        });
+      }
 
       if (data == 'gallery') {
         const g = e.target.closest('.gallery')
@@ -595,7 +608,6 @@
 
       forms.forEach((form, i) => {
         form.querySelectorAll('select').forEach((select, i) => {
-          console.log(i)
 
           new CustomSelect({
             elem: select
@@ -720,11 +732,26 @@
     })
   })
 
-  document.querySelectorAll('[data-map]').forEach((btn, i) => {
-    btn.addEventListener('click', (e) => {
-      document.querySelector('button[data-tab="1"]').click()
+  // address search
+  const addressSearchForm = $('#address-search')
+
+  if (addressSearchForm) {
+    const field = $(addressSearchForm).find('input')
+
+    $(field).on('keyup', function(e) {
+      const value = $(this).val().toLowerCase()
+
+      $('[data-address]').each(function(i, address) {
+        if ($(address).text().toLowerCase().includes(value)) {
+          $(address).closest('.office').show();
+        } else {
+          $(address).closest('.office').hide();
+        }
+      })
+
+      $('[data-tab="0"]').trigger('click')
     })
-  })
+  }
 
   //Имитация загрузки
   const loading = document.querySelector('.loading');

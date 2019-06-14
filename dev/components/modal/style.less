@@ -1,6 +1,39 @@
 .modal {
   max-width: 100%;
 
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    transition: all .16s;
+
+    &::before {
+      .positionCenter();
+      font-size: 24px;
+      font-weight: bold;
+      content: '×';
+    }
+
+    &:hover,
+    &:focus {
+      color: @colorHighlight;
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__content_map {
+    height: 400px;
+  }
+
   &__head {
     text-align: center;
 
@@ -35,7 +68,7 @@
     &__caption {
       display: block;
     }
-    
+
     &:last-child {
       margin: 0;
     }

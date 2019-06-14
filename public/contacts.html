@@ -512,7 +512,7 @@
           <h3 class="caption caption_centered">Офисы в Санкт - Петербурге
           </h3>
           <div class="block block_form block_address">
-            <form class="address">
+            <form class="address" id="address-search">
               <div class="address__field">
                 <label class="field field_size-wide">
                   <div class="field__input"><input type="text" placeholder="Введите адрес"/>
@@ -566,9 +566,7 @@
                             <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                           </svg></i><span>Адрес:</span>
                         </div>
-                        <p>
-                          Санкт-Петербург,<br>
-                          ул. Типанова, д. 3
+                        <p class="office__address" data-address="data-address">Санкт-Петербург, ул. Типанова, д. 3
                         </p>
                       </div>
                       <div class="office__block">
@@ -676,7 +674,7 @@
                       <div class="office__footer">
                         <p>Специалист по страхованию финским визам и загранпаспортам:</p><a class="office__tel" href="tel:78123860686">+7 (812) 386-06-86 <strong>(доб. 317)</strong></a>
                         <div class="office__actions">
-                          <button class="link" data-map="data-map"> <i class="ico">
+                          <button class="link" data-modal-open="map" data-coords="51.66,39.20"> <i class="ico">
                             <svg>
                               <use xlink:href="img/symbols.svg#svg-ico-map"></use>
                             </svg></i><span>Посмотреть на карте</span>
@@ -708,9 +706,7 @@
                             <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                           </svg></i><span>Адрес:</span>
                         </div>
-                        <p>
-                          Санкт-Петербург,<br>
-                          ул. Типанова, д. 3
+                        <p class="office__address" data-address="data-address">Барнаул, ул. Пролетарская, д. 150
                         </p>
                       </div>
                       <div class="office__block">
@@ -780,7 +776,7 @@
                                 <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                               </svg></i><span>Адрес:</span>
                             </div>
-                            <p>Санкт-Петербург, ул. Типанова, д. 3</p>
+                            <p>Барнаул, ул. Пролетарская, д. 150</p>
                           </li>
                           <li class="office__line">
                             <div class="office__caption"><i class="ico">
@@ -818,7 +814,7 @@
                       <div class="office__footer">
                         <p>Специалист по страхованию финским визам и загранпаспортам:</p><a class="office__tel" href="tel:78123860686">+7 (812) 386-06-86 <strong>(доб. 317)</strong></a>
                         <div class="office__actions">
-                          <button class="link" data-map="data-map"> <i class="ico">
+                          <button class="link" data-modal-open="map" data-coords="51.66,39.20"> <i class="ico">
                             <svg>
                               <use xlink:href="img/symbols.svg#svg-ico-map"></use>
                             </svg></i><span>Посмотреть на карте</span>
@@ -850,9 +846,7 @@
                             <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                           </svg></i><span>Адрес:</span>
                         </div>
-                        <p>
-                          Санкт-Петербург,<br>
-                          ул. Типанова, д. 3
+                        <p class="office__address" data-address="data-address">Москва, ул. Кудрявцева, д. 33
                         </p>
                       </div>
                       <div class="office__block">
@@ -922,7 +916,7 @@
                                 <use xlink:href="img/symbols.svg#svg-ico-place"></use>
                               </svg></i><span>Адрес:</span>
                             </div>
-                            <p>Санкт-Петербург, ул. Типанова, д. 3</p>
+                            <p>Москва, ул. Кудрявцева, д. 33</p>
                           </li>
                           <li class="office__line">
                             <div class="office__caption"><i class="ico">
@@ -960,7 +954,7 @@
                       <div class="office__footer">
                         <p>Специалист по страхованию финским визам и загранпаспортам:</p><a class="office__tel" href="tel:78123860686">+7 (812) 386-06-86 <strong>(доб. 317)</strong></a>
                         <div class="office__actions">
-                          <button class="link" data-map="data-map"> <i class="ico">
+                          <button class="link" data-modal-open="map" data-coords="51.66,39.20"> <i class="ico">
                             <svg>
                               <use xlink:href="img/symbols.svg#svg-ico-map"></use>
                             </svg></i><span>Посмотреть на карте</span>
@@ -1049,6 +1043,8 @@
     </footer>
     <div class="page__modals">
       <div class="modal modal_size-s" data-modal="order">
+        <button class="modal__close">
+        </button>
         <header class="modal__head"><span class="caption caption_size-l">Оставить заявку</span>
         </header>
         <div class="modal__content">
@@ -1085,6 +1081,8 @@
         </div>
       </div>
       <div class="modal modal_size-s" data-modal="claim">
+        <button class="modal__close">
+        </button>
         <header class="modal__head"><span class="caption caption_size-l">Написать директору</span>
         </header>
         <div class="modal__content">
@@ -1140,6 +1138,14 @@
           </button>
         </div>
         <div class="modal__content">
+        </div>
+      </div>
+      <div class="modal" data-modal="map">
+        <button class="modal__close">
+        </button>
+        <header class="modal__head"><span class="caption caption_size-l">Воронеж</span>
+        </header>
+        <div class="modal__content modal__content_map">
         </div>
       </div>
     </div>
